@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Página Principal -->
+  <url>
+    <loc>https://quimicosocam.com/</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/image copy.png</image:loc>
+      <image:title>Químicos OCAM - Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- Página de Catálogo -->
+  <url>
+    <loc>https://quimicosocam.com/catalogo</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Productos Individuales -->
+  <url>
+    <loc>https://quimicosocam.com/productos/abrillantador-pisos-mosaico</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantador-de-Piso-768x768.png</image:loc>
+      <image:title>Abrillantador de Pisos Mosaico</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/abrillantador-superficies</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantador-Embellecedor-Protector-768x768.png</image:loc>
+      <image:title>Abrillantador de Superficies</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/abrillantin</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantin.png</image:loc>
+      <image:title>Abrillantin</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/acido-muriatico</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Acido-Muriatico.png</image:loc>
+      <image:title>Ácido Muriático</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/alumigon</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Alumigon.png</image:loc>
+      <image:title>Alumigon</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/brillim-shampoo-car-cera</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Shampoo-para-autos.png</image:loc>
+      <image:title>Brillim Shampoo Car con Cera</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/brillosa-cera-pisos</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Cera-liquida-para-pisos.png</image:loc>
+      <image:title>Brillosa Cera para Pisos</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/carbocam</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Carbocan.png</image:loc>
+      <image:title>Carbocam</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/superclor-12</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/superclor-6</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/superclor-granulado-70</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-Cloro-Granulado.png</image:loc>
+      <image:title>Cloro Granulado 70%</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/superclor-granulado-91</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-91.png</image:loc>
+      <image:title>Cloro Granulado 91%</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/complementos</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Accesorios-Varios.png</image:loc>
+      <image:title>Complementos</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/controlador-olores</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Controlador-Malos-Olores-Casos-Dificiles.png</image:loc>
+      <image:title>Controlador de Olores</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/crema-lavaplatos</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Crema-Lava-Platos.png</image:loc>
+      <image:title>Crema Lavaplatos</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/desinfectante-ocam</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Desinfectante-Limpiador-Poderoso.png</image:loc>
+      <image:title>Desinfectante OCAM Poderoso</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/detergente-liquido-ropa</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Detergente-Liquido-Para-Ropa.png</image:loc>
+      <image:title>Detergente Líquido para Ropa</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/determil-industrial</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Determill.png</image:loc>
+      <image:title>Determil Industrial</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/envases-vacios</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Envases-Vacios.png</image:loc>
+      <image:title>Envases Vacíos</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/espuxil-detergente</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Espuxil-2.png</image:loc>
+      <image:title>Espuxil Detergente</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/f68-aceite-bomba-vacio</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Aceite-Bomba-De-Vacio.png</image:loc>
+      <image:title>F-68 Aceite para Bomba de Vacío</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/fm500-detergente-alcalino</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/FM-500.png</image:loc>
+      <image:title>FM-500 Detergente Alcalino</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/formalina-37</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Formalina-37.png</image:loc>
+      <image:title>Formalina 37%</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quimicosocam.com/productos/fragancias-ambientales</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quimicosocam.com/wp-content/uploads/2022/08/Aromas.png</image:loc>
+      <image:title>Fragancias Ambientales Fragant</image:title>
+    </image:image>
+  </url>
+
+</urlset>
