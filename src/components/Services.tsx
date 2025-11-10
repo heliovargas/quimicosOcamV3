@@ -118,7 +118,7 @@ export default function Services() {
                 Gracias a la combinación de la experiencia y conocimientos técnicos inigualables,
               </p>
               <p className="text-base sm:text-lg lg:text-3xl text-white leading-relaxed">
-                <span className="font-bold">OCAM.S.A.</span> abarca toda la cadena de suministro, desde materias primas hasta el consumo final.
+                <span className="font-bold">OCAM</span> abarca toda la cadena de suministro, desde materias primas hasta el consumo final.
               </p>
               <div className="inline-block w-16 h-1 bg-white/30 rounded-full mt-6 group-hover:w-24 transition-all duration-500"></div>
             </div>

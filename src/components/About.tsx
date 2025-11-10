@@ -38,7 +38,7 @@ export default function About() {
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Tecnología e Innovación</h3>
                   <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
-                    <span className="font-bold text-[#2E5C9A]">QUÍMICOS OCAM S.A.</span> es una compañía dirigida a la producción de productos de limpieza, considerada líder en área de distribución de productos químicos en la Zona Norte de nuestro país, gracias a la calidad e integridad que ofrecemos.
+                    <span className="font-bold text-[#2E5C9A]">OCAM Productos de Limpieza</span> es una compañía dirigida a la producción de productos de limpieza, considerada líder en área de distribución en la Zona Norte de nuestro país, gracias a la calidad e integridad que ofrecemos.
                   </p>
                   <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     Nuestra tecnología nos permite la creación de fórmulas para productos de limpieza y desinfección, desarrolladas bajo las más estrictas normas de calidad, con materias primas importadas y con el menor costo económico posible.
@@ -55,7 +55,7 @@ export default function About() {
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Compromiso Social</h3>
                   <p className="text-sm sm:text-base leading-relaxed">
-                    En Químicos OCAM S.A. nos solidarizamos con el sector doméstico, lechero e industrial, poniendo en sus manos productos de alta calidad a precios accesibles, ampliamente probados y debidamente registrados en el Ministerio de Salud.
+                    En OCAM nos solidarizamos con el sector doméstico, lechero e industrial, poniendo en sus manos productos de alta calidad a precios accesibles, ampliamente probados y debidamente registrados en el Ministerio de Salud.
                   </p>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -80,18 +80,27 @@ export default function Footer() {
                 </div>
               </li>
               <li className="group">
-                <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all">
+                <a
+                  href="https://maps.google.com/?q=Provincia+de+Alajuela,+Cerro+Cortez,+800m+este+del+Servicentro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all cursor-pointer"
+                >
                   <div className="w-10 h-10 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <MapPin size={18} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p className="text-gray-400 text-sm mb-1">Ubicación</p>
                     <p className="font-semibold leading-relaxed">
                       Provincia de Alajuela, Cerro Cortez<br />
                       800m este del Servicentro
                     </p>
+                    <p className="text-[#51B848] text-xs mt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ExternalLink size={12} />
+                      <span>Ver en Google Maps</span>
+                    </p>
                   </div>
-                </div>
+                </a>
               </li>
             </ul>
           </div>

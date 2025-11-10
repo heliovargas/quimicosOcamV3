@@ -36,12 +36,12 @@ export default function ContactSection() {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Horarios de Atención</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-sm sm:text-base font-semibold text-gray-900">Lunes a Jueves</span>
-                    <span className="text-sm sm:text-base text-gray-600">8:00 a.m. - 5:30 p.m.</span>
+                    <span className="text-sm sm:text-base font-semibold text-gray-900">Lunes a Viernes</span>
+                    <span className="text-sm sm:text-base text-gray-600">7:00 a.m. - 5:00 p.m.</span>
                   </div>
                   <div className="flex justify-between items-center py-2">
-                    <span className="text-sm sm:text-base font-semibold text-gray-900">Viernes</span>
-                    <span className="text-sm sm:text-base text-gray-600">8:00 a.m. - 3:30 p.m.</span>
+                    <span className="text-sm sm:text-base font-semibold text-gray-900">Sábados</span>
+                    <span className="text-sm sm:text-base text-gray-600">7:00 a.m. - 12:00 p.m.</span>
                   </div>
                 </div>
               </div>

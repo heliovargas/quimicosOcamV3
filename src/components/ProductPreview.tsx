@@ -9,7 +9,17 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function ProductPreview() {
   const productos = productosData as Product[];
-  const featuredProducts = productos.slice(0, 4);
+
+  const featuredProductIds = [
+    'superclor-granulado-70',
+    'carbocam',
+    'brillim-shampoo-car-cera',
+    'abrillantador-pisos-mosaico'
+  ];
+
+  const featuredProducts = featuredProductIds
+    .map(id => productos.find(p => p.id === id))
+    .filter((p): p is Product => p !== undefined);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const productsAnim = useScrollAnimation();
 

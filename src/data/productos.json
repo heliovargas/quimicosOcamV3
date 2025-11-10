@@ -2,7 +2,7 @@
   {
     "id": "abrillantador-pisos-mosaico",
     "nombre": "Abrillantador de Pisos Mosaico",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Producto especializado para resaltar el brillo natural en pisos de mosaico, terrazo y terrazín.",
     "descripcionLarga": "El abrillantador de pisos es un producto para resaltar el brillo natural y para restablecer el brillo perdido por el tiempo y el uso continuo en sus pisos lujados, de mosaico o terrazo. Posee resinas sintéticas que protegen contra derrames de líquidos y restablecen el brillo perdido, solo con aplicar en forma abundante, sin necesidad de frotar. Además deja un agradable aroma donde sea aplicado.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantador-de-Piso-768x768.png",
@@ -12,7 +12,7 @@
   {
     "id": "abrillantador-superficies",
     "nombre": "Abrillantador de Superficies",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Formulado con resinas de silicón para dar brillo y protección a cuero, vinil, hule y plástico.",
     "descripcionLarga": "El abrillantador de superficies OCAM ha sido formulado con resinas de silicón y componentes especializados para dar brillo y protección a artículos de cuero, vinil, hule y plástico entre otros. Aplíquese en muebles, escritorios, áreas internas de automóviles y todo tipo de artículos que quiera abrillantar.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantador-Embellecedor-Protector-768x768.png"
@@ -20,7 +20,7 @@
   {
     "id": "abrillantin",
     "nombre": "Abrillantin",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Producto especializado para la limpieza, protección y embellecimiento de las llantas del automóvil.",
     "descripcionLarga": "Abrillantin es un producto especializado para la limpieza, protección y embellecimiento de las llantas del automóvil. Posee agentes que dan brillo permanente a cualquier tipo de llanta, sin importar si es nueva o usada. Crea en las llantas una capa protectora, la cual no es removida con la lluvia, ni con las salpicaduras de agua. Además impide se adhiera el polvo, manteniendo así el brillo constante y protección deseada.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Abrillantin.png"
@@ -28,7 +28,7 @@
   {
     "id": "acido-muriatico",
     "nombre": "Ácido Muriático",
-    "categorias": ["ferreteria"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Producto de carácter ácido fuerte para eliminar ceras y ocre en pisos lujados, previo a la instalación de un piso cerámico.",
     "descripcionLarga": "Es un producto de carácter ácido fuerte para eliminar ceras y ocre en pisos lujados, previo a la instalación de un piso cerámico. También elimina lana y musgos en paredes de cemento o ladrillo y puede ser usado para eliminar óxidos en superficies metálicas.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Acido-Muriatico.png",
@@ -38,7 +38,7 @@
   {
     "id": "alumigon",
     "nombre": "Alumigon",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Producto para la limpieza y renovación de superficies de aluminio. Remueve suciedad inorgánica y orgánica.",
     "descripcionLarga": "El Alumigon es un producto para la limpieza y renovación de superficies de aluminio. Remueve la suciedad inorgánica (óxido de aluminio, silicatos y carbonatos), y también la suciedad orgánica (grasa animal y vegetal). Limpia el aluminio, tráiler, marcos, aros, paneles (aire acondicionado), motores de combustión y muchos más. Este es un limpiador concentrado de tipo ácido, que deja un excelente acabado.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Alumigon.png",
@@ -47,7 +47,7 @@
   {
     "id": "brillim-shampoo-car-cera",
     "nombre": "Brillim Shampoo Car con Cera",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Shampoo para carros formulado con bases silicónicas que resaltan el brillo de la pintura.",
     "descripcionLarga": "El shampoo para carros 'Brillim con cera' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Shampoo-para-autos.png",
@@ -56,7 +56,7 @@
   {
     "id": "brillosa-cera-pisos",
     "nombre": "Brillosa Cera para Pisos",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Formulada con resinas antideslizantes y sintéticas para sellar, proteger y dar brillo a pisos.",
     "descripcionLarga": "Brillosa ha sido formulada con resinas antideslizantes y sintéticas especiales para sellar los micro-poros de los pisos, proteger la superficie y dar brillo cuando se frota. Se ofrece en dos tipos: Brillosa roja y Brillosa blanca, según sea su necesidad.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Cera-liquida-para-pisos.png",
@@ -94,7 +94,7 @@
   {
     "id": "superclor-granulado-70",
     "nombre": "Cloro Granulado 70%",
-    "categorias": ["ferreteria", "piscinas"],
+    "categorias": ["piscinas"],
     "descripcionCorta": "Producto altamente concentrado en hipoclorito de calcio para eliminar bacterias, hongos y algas.",
     "descripcionLarga": "Superclor granulado es un producto altamente concentrado en hipoclorito de calcio, ingrediente capaz de eliminar cualquier tipo de bacteria, hongo o alga presente en cualquier superficie, líquido o sustancia viscosa. En el tratamiento de aguas de piscina, se usa para el mantenimiento diario, en la dosis recomendada por nuestros asesores.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-Cloro-Granulado.png",
@@ -167,7 +167,7 @@
   {
     "id": "desinfectante-ocam",
     "nombre": "Desinfectante OCAM Poderoso",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante limpiador concentrado de uso industrial y doméstico que elimina bacterias y da brillo.",
     "descripcionLarga": "Poderoso es un desinfectante limpiador de uso industrial y doméstico. Elimina bacterias, deja un agradable aroma y da brillo a sus pisos. Es un producto concentrado, por lo cual puede diluirse en 3 partes de agua.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Desinfectante-Limpiador-Poderoso.png",
@@ -193,7 +193,7 @@
   {
     "id": "detergente-liquido-ropa",
     "nombre": "Detergente Líquido para Ropa",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Formulado con mezcla balanceada de abrasivos que limpian a fondo sin dañar los tejidos, ideal para prendas finas.",
     "descripcionLarga": "El detergente líquido para ropa está formulado con una mezcla balanceada de abrasivos capaces de quitar la suciedad, sulfactantes y agentes espumosos que limpian a fondo sin dañar los tejidos. Posee gran cantidad de espuma y un agradable aroma que deja la ropa suave, limpia y olorosa. Se recomienda para prendas finas y ropas que se necesita que no pierdan su color.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Detergente-Liquido-Para-Ropa.png",
@@ -207,7 +207,7 @@
   {
     "id": "determil-industrial",
     "nombre": "Determil Industrial",
-    "categorias": ["domestico", "institucional", "lecherias"],
+    "categorias": ["domestico", "lecherias"],
     "descripcionCorta": "Detergente industrial desengrasante, espumoso y con abrasivos. Sin olor, ideal para higiene de tanques de leche.",
     "descripcionLarga": "Determil es un detergente industrial desengrasante, espumoso y con abrasivos. Al contacto con el agua produce gran cantidad de espuma y elimina con facilidad la grasa, tierra o cualquier suciedad existente. No posee olor, siendo ideal para higiene de tanques de leche, pezoneras e instrumentos utilizados en la manipulación de alimentos.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Determill.png",
@@ -220,7 +220,7 @@
   {
     "id": "envases-vacios",
     "nombre": "Envases Vacíos",
-    "categorias": ["ferreteria"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Envases vacíos en diferentes presentaciones para almacenamiento y aplicación de productos químicos.",
     "descripcionLarga": "Tenemos todo lo que usted necesita en envases vacíos para almacenar y aplicar productos de limpieza. Disponibles en diferentes tamaños y formatos según su necesidad.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Envases-Vacios.png",
@@ -289,7 +289,7 @@
   {
     "id": "fragancias-ambientales",
     "nombre": "Fragancias Ambientales Fragant",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Desodorante ambiental con esencias aromáticas que perduran por horas, dando sensación de frescura.",
     "descripcionLarga": "Fragant es un desodorante ambiental, que perfuma los ambientes en donde es aplicado. Posee esencias aromáticas que perduran con un agradable olor en el ambiente, por varias horas, dando así una sensación de frescura. Se encuentran en varios olores para escoger de acuerdo a su preferencia.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Aromas.png",
@@ -323,7 +323,7 @@
   {
     "id": "limpro-ceramica",
     "nombre": "Limpro Cerámica",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Limpiador concentrado de alto poder para remover suciedad difícil en pisos de cerámica.",
     "descripcionLarga": "El limpiador para pisos de cerámica 'Limpro' por su alto poder es ideal para remover la suciedad presente en los pisos, causada por derrames de bebidas, dulces, comidas, tierra, grasa y otros. Limpro actúa donde un limpiador común no es efectivo dada su concentración de tensoactivos.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Limpio.png",
@@ -338,7 +338,7 @@
   {
     "id": "manu-jabon-manos",
     "nombre": "Manu Jabón para Manos",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Jabón líquido antibacterial de uso industrial y doméstico con componentes yodados que generan gran espuma.",
     "descripcionLarga": "Manu es un producto versátil de uso industrial y doméstico. Posee componentes yodados que le dan carácter antibacterial, genera gran cantidad de espuma eliminando suciedad y bacterias. Se aplica puro, mediante dispensador automático o manual.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Manu.png",
@@ -376,7 +376,7 @@
   {
     "id": "multiplex-industrial",
     "nombre": "Multiplex Industrial",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Desengrasante industrial de alta potencia para casos difíciles en superficies industriales y automotrices.",
     "descripcionLarga": "Múltiplex es el limpiador desengrasante por excelencia especial para los casos difíciles, donde un limpiador normal no funciona. Múltiplex elimina todo tipo de suciedad y grasa, presente en cualquier tipo de superficie como cuero, resina, metal, plástico, etc.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Desengrasante-De-Uso-Industrial.png",
@@ -390,7 +390,7 @@
   {
     "id": "multiplex-neutro",
     "nombre": "Multiplex Neutro",
-    "categorias": ["institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Limpiador desengrasante con pH neutro ideal para superficies delicadas que requieren limpieza profunda sin dañar.",
     "descripcionLarga": "Múltiplex Neutro es un limpiador desengrasante de pH balanceado especialmente formulado para superficies delicadas que requieren una limpieza profunda sin el riesgo de daño por alcalinidad. Mantiene todas las propiedades de limpieza de la línea Multiplex pero con un pH neutro que lo hace seguro para todo tipo de materiales sensibles, incluyendo aluminio, acero inoxidable y superficies pintadas.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Multiplex-Desengrasante-Neutro.png"
@@ -398,7 +398,7 @@
   {
     "id": "pomes-crema-quita-grasa",
     "nombre": "Pomes Crema Quita-Grasa",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Crema quita grasa de uso industrial y mecánico con abrasivos que elimina grasa, tierra y pintura de las manos.",
     "descripcionLarga": "Pomes es una crema quita grasa de uso industrial y mecánico. Contiene abrasivos en pequeños trozos a similitud de arena, los cuales al frotar las manos luego de ser aplicada, ayudan a eliminar la grasa, tierra, pintura y cualquier tipo de suciedad existente. Sus contenidos de solventes y detergentes eliminan la grasa presente en las manos de una forma rápida y sin dañar las mismas.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Pomes.png",
@@ -412,7 +412,7 @@
   {
     "id": "potasa",
     "nombre": "Potasa",
-    "categorias": ["ferreteria"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Producto esencial para prevención de obstrucciones en tuberías y eliminación de hongos.",
     "descripcionLarga": "Potasa es el producto esencial para la prevención de obstrucciones en tuberías de desagües y sifones. Elimina las aglomeraciones de grasa y materia orgánica presentes en estos sitios. También es usado como un excelente anti-hongos para cualquier superficie que el agua no dañe.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Potasa.png"
@@ -420,7 +420,7 @@
   {
     "id": "shampoo-car-sin-cera",
     "nombre": "Shampoo Car Sin Cera",
-    "categorias": ["automotriz", "institucional"],
+    "categorias": ["automotriz"],
     "descripcionCorta": "Shampoo para carros formulado con bases silicónicas que resaltan el brillo de la pintura sin cera.",
     "descripcionLarga": "El shampoo para carros 'Shampoo Car' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Shampoo-Car.png",
@@ -446,7 +446,7 @@
   {
     "id": "superclor-12-domestico",
     "nombre": "Superclor 12% Doméstico",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Poderoso desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor 12% es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-12.png",
@@ -461,7 +461,7 @@
   {
     "id": "superclor-4",
     "nombre": "Superclor 4%",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para instalaciones industriales, hoteles, escuelas y plantas procesadoras.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro capaz de eliminar una amplia gama de microorganismos presentes en instalaciones industriales e institucionales, tales como hoteles, escuelas, y plantas procesadoras de alimentos.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-4.png",
@@ -474,7 +474,7 @@
   {
     "id": "superclor-6-domestico",
     "nombre": "Superclor 6% Doméstico",
-    "categorias": ["domestico", "institucional"],
+    "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
     "imageUrl": "https://quimicosocam.com/wp-content/uploads/2022/08/Superclor-6.png",

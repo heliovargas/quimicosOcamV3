@@ -10,7 +10,7 @@ interface ProductDetailProps {
 
 export default function ProductDetail({ product, showFullPageButton = false, onViewFullPage }: ProductDetailProps) {
   const whatsappMessage = `Hola, me interesa el producto: ${product.nombre}`;
-  const whatsappUrl = `https://wa.me/50687167008?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/50661951073?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="bg-white">

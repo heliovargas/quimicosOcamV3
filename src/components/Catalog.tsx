@@ -4,13 +4,11 @@ import { categorias } from '../types/Product';
 import type { Product } from '../types/Product';
 import productosData from '../data/productos.json';
 import ProductModal from './ProductModal';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Catalog() {
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const catalogAnim = useScrollAnimation();
 
   const productos = productosData as Product[];
 
@@ -99,12 +97,13 @@ export default function Catalog() {
             </p>
           </div>
         ) : (
-          <div ref={catalogAnim.ref} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-700 ${catalogAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {filteredProducts.map(product => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredProducts.map((product, index) => (
               <div
                 key={product.id}
                 onClick={() => setSelectedProduct(product)}
-                className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all border border-gray-200 group cursor-pointer"
+                className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all border border-gray-200 group cursor-pointer animate-fade-in"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="aspect-square bg-gray-100 overflow-hidden">
                   <img
