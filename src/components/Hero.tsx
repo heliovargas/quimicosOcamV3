@@ -55,7 +55,8 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="https://images.pexels.com/photos/923228/pexels-photo-923228.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Volcán Arenal Costa Rica"
+          alt="Vista del Volcán Arenal en la Zona Norte de Costa Rica, región donde opera Químicos OCAM"
+          loading="eager"
           className="w-full h-full object-cover opacity-15 blur-sm"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white/90 to-green-50/80"></div>

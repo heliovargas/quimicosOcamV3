@@ -28,6 +28,67 @@ export function updateMetaTags(
   updateOrCreateLinkTag('canonical', url);
 }
 
+export function addProductSchema(product: {
+  nombre: string;
+  descripcionCorta: string;
+  imageUrl: string;
+  id: string;
+  categorias: string[];
+}) {
+  const existingScript = document.querySelector('script[data-schema="product"]');
+  if (existingScript) {
+    existingScript.remove();
+  }
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.nombre,
+    "description": product.descripcionCorta,
+    "image": product.imageUrl,
+    "url": `https://quimicosocam.com/productos/${product.id}`,
+    "brand": {
+      "@type": "Brand",
+      "name": "Químicos OCAM"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Químicos OCAM S.A.",
+      "url": "https://quimicosocam.com"
+    }
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.setAttribute('data-schema', 'product');
+  script.textContent = JSON.stringify(productSchema);
+  document.head.appendChild(script);
+}
+
+export function addBreadcrumbSchema(items: { name: string; url: string }[]) {
+  const existingScript = document.querySelector('script[data-schema="breadcrumb"]');
+  if (existingScript) {
+    existingScript.remove();
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.setAttribute('data-schema', 'breadcrumb');
+  script.textContent = JSON.stringify(breadcrumbSchema);
+  document.head.appendChild(script);
+}
+
 function updateOrCreateMetaTag(
   attribute: 'name' | 'property',
   value: string,

@@ -1,0 +1,27 @@
+{
+  "name": "Químicos OCAM - Productos de Limpieza",
+  "short_name": "OCAM",
+  "description": "Líderes en productos de limpieza y desinfección en la Zona Norte de Costa Rica",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E5C9A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/ocam.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/ocam.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "lang": "es-CR",
+  "dir": "ltr"
+}

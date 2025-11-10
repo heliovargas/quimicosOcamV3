@@ -5,7 +5,7 @@ import productosData from '../data/productos.json';
 import type { Product } from '../types/Product';
 import ProductDetail from '../components/ProductDetail';
 import { categorias } from '../types/Product';
-import { updateMetaTags, resetMetaTags } from '../utils/seo';
+import { updateMetaTags, resetMetaTags, addProductSchema, addBreadcrumbSchema } from '../utils/seo';
 
 export default function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -33,11 +33,21 @@ export default function ProductPage() {
     const url = `https://quimicosocam.com/productos/${product.id}`;
 
     updateMetaTags(title, description, keywords, url, product.imageUrl);
+    addProductSchema(product);
+    addBreadcrumbSchema([
+      { name: 'Inicio', url: 'https://quimicosocam.com' },
+      { name: 'Catálogo', url: 'https://quimicosocam.com/catalogo' },
+      { name: product.nombre, url: url }
+    ]);
 
     window.scrollTo(0, 0);
 
     return () => {
       resetMetaTags();
+      const productScript = document.querySelector('script[data-schema="product"]');
+      const breadcrumbScript = document.querySelector('script[data-schema="breadcrumb"]');
+      if (productScript) productScript.remove();
+      if (breadcrumbScript) breadcrumbScript.remove();
     };
   }, [product]);
 
@@ -117,7 +127,8 @@ export default function ProductPage() {
                   <div className="aspect-square bg-gray-100 overflow-hidden">
                     <img
                       src={relatedProduct.imageUrl}
-                      alt={relatedProduct.nombre}
+                      alt={`${relatedProduct.nombre} - ${relatedProduct.descripcionCorta}`}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

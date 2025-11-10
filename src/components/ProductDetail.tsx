@@ -18,7 +18,7 @@ export default function ProductDetail({ product, showFullPageButton = false, onV
         <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
           <img
             src={product.imageUrl}
-            alt={product.nombre}
+            alt={`${product.nombre} - ${product.descripcionCorta}`}
             loading="lazy"
             className="w-full h-full object-cover"
           />

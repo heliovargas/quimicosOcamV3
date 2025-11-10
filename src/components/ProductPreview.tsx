@@ -55,7 +55,7 @@ export default function ProductPreview() {
                   <div className="aspect-square bg-gray-100 overflow-hidden">
                     <img
                       src={product.imageUrl}
-                      alt={product.nombre}
+                      alt={`${product.nombre} - ${product.descripcionCorta}`}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
