@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 relative inline-block">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 relative inline-block">
               Enlaces Rápidos
               <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
             </h3>
@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 relative inline-block">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 relative inline-block">
               Información de Contacto
               <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
             </h3>

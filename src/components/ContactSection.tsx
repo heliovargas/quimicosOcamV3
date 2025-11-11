@@ -2,14 +2,17 @@ import { MapPin, Clock } from 'lucide-react';
 
 export default function ContactSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Visítenos
+          <div className="inline-block mb-4">
+            <span className="text-sm font-semibold text-[#2E5C9A] tracking-wider uppercase">Contacto</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <span className="text-[#2E5C9A]">Visítenos</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Encuéntrenose en la Zona Norte
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Encuéntrenos en la Zona Norte
           </p>
         </div>
 

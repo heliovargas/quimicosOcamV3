@@ -25,7 +25,7 @@ export default function Catalog() {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
             Catálogo de Productos
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ export default function Catalog() {
                       </span>
                     ))}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2E5C9A] transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-[#2E5C9A] transition-colors">
                     {product.nombre}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

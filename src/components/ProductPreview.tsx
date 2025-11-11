@@ -45,12 +45,12 @@ export default function ProductPreview() {
 
         {featuredProducts.length > 0 ? (
           <>
-            <div ref={productsAnim.ref} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 transition-all duration-700 ${productsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div ref={productsAnim.ref} className={`grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-16 transition-all duration-700 ${productsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               {featuredProducts.map((product, index) => (
                 <div
                   key={product.id}
                   onClick={() => setSelectedProduct(product)}
-                  className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all border border-gray-200 group cursor-pointer"
+                  className="bg-white rounded-lg sm:rounded-xl overflow-hidden hover:shadow-lg transition-all border border-gray-200 group cursor-pointer"
                 >
                   <div className="aspect-square bg-gray-100 overflow-hidden">
                     <img
@@ -60,18 +60,18 @@ export default function ProductPreview() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-1.5 mb-3">
+                  <div className="p-3 sm:p-6">
+                    <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
                       {product.categorias.slice(0, 2).map(cat => (
-                        <span key={cat} className="text-[8px] font-semibold text-[#2E5C9A] bg-blue-50 px-2 py-0.5 rounded uppercase tracking-wide">
+                        <span key={cat} className="text-[7px] sm:text-[8px] font-semibold text-[#2E5C9A] bg-blue-50 px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wide">
                           {categorias.find(c => c.id === cat)?.nombre}
                         </span>
                       ))}
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2E5C9A] transition-colors">
+                    <h3 className="text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-[#2E5C9A] transition-colors line-clamp-2">
                       {product.nombre}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                    <p className="text-gray-600 text-[10px] sm:text-sm leading-relaxed line-clamp-2 hidden sm:block">
                       {product.descripcionCorta}
                     </p>
                   </div>

@@ -114,10 +114,10 @@ export default function Services() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#51B848]/0 via-[#51B848]/20 to-[#51B848]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             <div className="relative max-w-4xl mx-auto text-center">
               <div className="inline-block w-16 h-1 bg-white/30 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
-              <p className="text-base sm:text-lg lg:text-3xl text-white leading-relaxed font-light mb-2">
+              <p className="text-base sm:text-xl lg:text-2xl text-white leading-relaxed font-light mb-2">
                 Gracias a la combinación de la experiencia y conocimientos técnicos inigualables,
               </p>
-              <p className="text-base sm:text-lg lg:text-3xl text-white leading-relaxed">
+              <p className="text-base sm:text-xl lg:text-2xl text-white leading-relaxed">
                 <span className="font-bold">OCAM</span> abarca toda la cadena de suministro, desde materias primas hasta el consumo final.
               </p>
               <div className="inline-block w-16 h-1 bg-white/30 rounded-full mt-6 group-hover:w-24 transition-all duration-500"></div>
