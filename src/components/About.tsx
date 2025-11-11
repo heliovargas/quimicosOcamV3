@@ -8,7 +8,7 @@ export default function About() {
   const card4 = useScrollAnimation();
   const visionCards = useScrollAnimation();
   return (
-    <section id="nosotros" className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section id="nosotros" className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>

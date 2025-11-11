@@ -24,7 +24,7 @@ export default function ProductPreview() {
   const productsAnim = useScrollAnimation();
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>

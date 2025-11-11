@@ -42,7 +42,7 @@ export default function Services() {
   const bannerAnim = useScrollAnimation();
 
   return (
-    <section id="servicios" className="relative py-32 bg-white overflow-hidden">
+    <section id="servicios" className="relative py-12 md:py-16 lg:py-20 bg-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
