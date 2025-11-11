@@ -164,15 +164,33 @@ export default function LeafletCoverageMap() {
           .leaflet-popup-content-wrapper {
             border-radius: 12px;
             padding: 0;
+            min-width: 160px;
           }
           .leaflet-popup-content {
             margin: 0;
             width: auto !important;
+            min-width: 160px;
+          }
+          .leaflet-popup-tip-container {
+            top: 0 !important;
+            transform: rotate(180deg) !important;
+            margin-top: -1px !important;
           }
           .leaflet-popup-close-button {
             color: #374151 !important;
-            font-size: 20px !important;
-            padding: 8px 12px !important;
+            font-size: 18px !important;
+            padding: 4px 8px !important;
+            width: 24px !important;
+            height: 24px !important;
+            top: 4px !important;
+            right: 4px !important;
+            font-weight: bold !important;
+            line-height: 1 !important;
+          }
+          .leaflet-popup-close-button:hover {
+            color: #111827 !important;
+            background-color: #f3f4f6 !important;
+            border-radius: 4px !important;
           }
         `}
       </style>
@@ -215,7 +233,7 @@ export default function LeafletCoverageMap() {
                 scrollWheelZoom={true}
                 zoomControl={true}
                 style={{ height: '100%', width: '100%' }}
-                maxBounds={[[8.2, -85.95], [11.15, -82.55]]}
+                maxBounds={[[8.2, -85.95], [11.70, -82.55]]}
                 maxBoundsViscosity={1.0}
               >
                 <TileLayer
@@ -261,26 +279,10 @@ export default function LeafletCoverageMap() {
                     click: () => setActivePoint(baseLocation)
                   }}
                 >
-                  <Popup>
-                    <div className="p-4 min-w-[200px]">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
-                          style={{ background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)' }}
-                        >
-                          <Building2 className="text-white" size={24} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-gray-900 text-lg">{baseLocation.name}</h4>
-                          <p className="text-sm text-gray-600">{baseLocation.zone}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg">
-                          <span className="text-gray-600">Cobertura:</span>
-                          <span className="font-bold text-red-600">Principal</span>
-                        </div>
-                      </div>
+                  <Popup offset={[0, -20]} autoPan={true} autoPanPadding={[50, 50]}>
+                    <div className="p-3">
+                      <h4 className="font-bold text-gray-900 text-sm mb-1">{baseLocation.name}</h4>
+                      <p className="text-xs text-red-600 font-semibold">Base Principal</p>
                     </div>
                   </Popup>
                 </Marker>
@@ -295,40 +297,17 @@ export default function LeafletCoverageMap() {
                       activePoint?.name === point.name
                     )}
                     eventHandlers={{
-                      click: () => {
-                        setActivePoint(point);
-                        flyToZone(point);
-                      },
+                      click: () => setActivePoint(point),
                       mouseover: () => setHoveredPoint(point.name),
                       mouseout: () => setHoveredPoint(null)
                     }}
                   >
-                    <Popup>
-                      <div className="p-4 min-w-[200px]">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div
-                            className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
-                            style={{ backgroundColor: getStrengthColor(point.strength) }}
-                          >
-                            <Store className="text-white" size={24} />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="font-bold text-gray-900 text-lg">{point.name}</h4>
-                            <p className="text-sm text-gray-600">{point.zone}</p>
-                          </div>
-                        </div>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg">
-                            <span className="text-gray-600">Cobertura:</span>
-                            <span className="font-bold" style={{ color: getStrengthColor(point.strength) }}>
-                              {point.strength === 'high' ? 'Alta' : point.strength === 'medium' ? 'Media' : 'Nueva'}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg">
-                            <span className="text-gray-600">Estado:</span>
-                            <span className="font-semibold text-green-600">Activo</span>
-                          </div>
-                        </div>
+                    <Popup offset={[0, -20]} autoPan={true} autoPanPadding={[50, 50]}>
+                      <div className="p-3">
+                        <h4 className="font-bold text-gray-900 text-sm mb-1">{point.name}</h4>
+                        <p className="text-xs font-semibold" style={{ color: getStrengthColor(point.strength) }}>
+                          Cobertura {point.strength === 'high' ? 'Alta' : point.strength === 'medium' ? 'Media' : 'Nueva'}
+                        </p>
                       </div>
                     </Popup>
                   </Marker>
