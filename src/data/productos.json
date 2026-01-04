@@ -50,7 +50,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Shampoo para carros formulado con bases silicónicas que resaltan el brillo de la pintura.",
     "descripcionLarga": "El shampoo para carros 'Brillim con cera' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Shampoo-para-autos.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562341/ocam/productos/automotriz/brilim-shampo-con-cera_adskry.png",
     "usos": ["Lavado de automóviles, buses, camiones y motos", "Lavado de partes metálicas, plásticas o de hule"]
   },
   {
@@ -97,7 +97,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto altamente concentrado en hipoclorito de calcio para eliminar bacterias, hongos y algas.",
     "descripcionLarga": "Superclor granulado es un producto altamente concentrado en hipoclorito de calcio, ingrediente capaz de eliminar cualquier tipo de bacteria, hongo o alga presente en cualquier superficie, líquido o sustancia viscosa. En el tratamiento de aguas de piscina, se usa para el mantenimiento diario, en la dosis recomendada por nuestros asesores.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Superclor-Cloro-Granulado.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562556/ocam/productos/piscinas/superclor-cloro-granulado-70_f5rq7u.png",
     "presentaciones": ["1 galón", "800 g", "500 g"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Desinfección de instalaciones agro veterinarias e industriales", "Limpieza de aceras con musgo o algas", "Potabilización del agua de piscinas"]
   },
@@ -107,9 +107,39 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto necesario para mantenimiento y tratamiento de choque en agua de piscinas.",
     "descripcionLarga": "Superclor granulado 91%, es el producto necesario para el mantenimiento y tratamiento de choque en el agua de su piscina. Su alta concentración de ácido tricloro, elimina cualquier tipo de bacteria, hongo o alga presente en el agua.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Superclor-91.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563535/ocam/productos/piscinas/superclor-cloro-granulado-91_yzxd1w.png",
     "presentaciones": ["1 galón", "800 g", "500 g"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Desinfección de instalaciones agro veterinarias e industriales", "Limpieza de aceras con musgo o algas", "Potabilización del agua de piscinas"]
+  },
+  {
+    "id": "alcalifor",
+    "nombre": "Alcalifor",
+    "categorias": ["piscinas"],
+    "descripcionCorta": "Ajustador en polvo para elevar el pH del agua de su piscina al rango óptimo.",
+    "descripcionLarga": "Alcalifor es un producto en polvo que se diluye fácilmente en el agua de su piscina, elevando el pH cuando esté por debajo del rango normal (7.4 a 7.6). Mediante el uso de un clorímetro determine el nivel de pH en una muestra del agua de su piscina. Agregue 200 gramos de Alcalifor por cada 10 m³ de agua contenida en su piscina, con lo cual logrará elevar el pH en 1, si quiere elevar el pH en 2 o más agregue más cantidad según sea necesario. Verifique el pH después de cada aplicación para mantener el nivel deseado.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563042/ocam/productos/piscinas/alcalifor_gedtyk.png",
+    "presentaciones": ["20 kg", "10 kg", "4 kg"],
+    "usos": ["Ajuste y control del pH en piscinas", "Mantenimiento del rango óptimo de pH en agua de piscina", "Aplicación semanal para mantener el pH en el rango correcto"]
+  },
+  {
+    "id": "alguicida-80",
+    "nombre": "Alguicida 80%",
+    "categorias": ["piscinas"],
+    "descripcionCorta": "Producto especializado para el tratamiento y prevención de algas en aguas de piscina.",
+    "descripcionLarga": "Alguicida 80% es un producto altamente efectivo para el tratamiento de aguas de piscina. Su fórmula concentrada previene y elimina la aparición de algas en el agua de su piscina, manteniéndola cristalina y libre de verdín. Se aplica de manera semanal según el tamaño de su piscina para un mejor resultado. Recomendado aplicar directamente al agua de la piscina o disolverlo previamente en un balde con agua para facilitar su aplicación y distribución uniforme.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563046/ocam/productos/piscinas/alguicida-80_xxekbe.png",
+    "presentaciones": ["1 galón"],
+    "usos": ["Prevención y eliminación de algas en piscinas", "Mantenimiento semanal del agua cristalina", "Tratamiento preventivo contra verdín y algas verdes"]
+  },
+  {
+    "id": "clarit-plus",
+    "nombre": "Clarit Plus",
+    "categorias": ["piscinas"],
+    "descripcionCorta": "Clarificador floculante para obtener agua cristalina en su piscina de forma rápida y efectiva.",
+    "descripcionLarga": "Clarit Plus de Spin Piscinas es un clarificador floculante especialmente formulado para el tratamiento de aguas de piscina. Este producto agrupa las partículas pequeñas suspendidas en el agua, facilitando su filtración y eliminación. Ideal para cuando el agua de su piscina se ve turbia o lechosa. Ayuda a mantener el agua cristalina y brillante, mejorando la eficiencia del sistema de filtración. Se recomienda aplicar después del tratamiento con cloro para obtener resultados óptimos.",
+    "imageUrl": "/spin-claritplus.png",
+    "presentaciones": ["1 L"],
+    "usos": ["Clarificación de agua turbia en piscinas", "Mejora la eficiencia del sistema de filtración", "Eliminación de partículas suspendidas", "Mantenimiento de agua cristalina"]
   },
   {
     "id": "complementos",
@@ -401,7 +431,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Crema quita grasa de uso industrial y mecánico con abrasivos que elimina grasa, tierra y pintura de las manos.",
     "descripcionLarga": "Pomes es una crema quita grasa de uso industrial y mecánico. Contiene abrasivos en pequeños trozos a similitud de arena, los cuales al frotar las manos luego de ser aplicada, ayudan a eliminar la grasa, tierra, pintura y cualquier tipo de suciedad existente. Sus contenidos de solventes y detergentes eliminan la grasa presente en las manos de una forma rápida y sin dañar las mismas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Pomes.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562155/ocam/productos/automotriz/pomes-crema-quitagrasa_hhuwoi.png",
     "presentaciones": ["Pomes 1 galón", "Pomes 1/4 de galón"],
     "usos": [
       "En talleres mecánicos para eliminar la grasa y los aceites del personal y los clientes",
