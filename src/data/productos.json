@@ -137,7 +137,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Clarificador floculante para obtener agua cristalina en su piscina de forma rápida y efectiva.",
     "descripcionLarga": "Clarit Plus de Spin Piscinas es un clarificador floculante especialmente formulado para el tratamiento de aguas de piscina. Este producto agrupa las partículas pequeñas suspendidas en el agua, facilitando su filtración y eliminación. Ideal para cuando el agua de su piscina se ve turbia o lechosa. Ayuda a mantener el agua cristalina y brillante, mejorando la eficiencia del sistema de filtración. Se recomienda aplicar después del tratamiento con cloro para obtener resultados óptimos.",
-    "imageUrl": "/spin-claritplus.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563504/ocam/productos/piscinas/spin-claritplus_sxpwq6.png",
     "presentaciones": ["1 L"],
     "usos": ["Clarificación de agua turbia en piscinas", "Mejora la eficiencia del sistema de filtración", "Eliminación de partículas suspendidas", "Mantenimiento de agua cristalina"]
   },
