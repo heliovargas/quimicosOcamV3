@@ -79,6 +79,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor 12% es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590283/ocam/productos/lecherias/superclor-12_qaij8b.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Implementos de lechería y tanques de enfriamiento", "Potabilización del agua", "Desinfección de superficies y pisos"]
   },
@@ -88,6 +89,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767589938/ocam/productos/lecherias/superclor-6_ija3pq.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Implementos de lechería y tanques de enfriamiento", "Potabilización del agua", "Desinfección de superficies y pisos"]
   },
@@ -235,12 +237,12 @@
     ]
   },
   {
-    "id": "determil-industrial",
-    "nombre": "Determil Industrial",
+    "id": "determill-industrial",
+    "nombre": "Determill Industrial",
     "categorias": ["domestico", "lecherias"],
     "descripcionCorta": "Detergente industrial desengrasante, espumoso y con abrasivos. Sin olor, ideal para higiene de tanques de leche.",
-    "descripcionLarga": "Determil es un detergente industrial desengrasante, espumoso y con abrasivos. Al contacto con el agua produce gran cantidad de espuma y elimina con facilidad la grasa, tierra o cualquier suciedad existente. No posee olor, siendo ideal para higiene de tanques de leche, pezoneras e instrumentos utilizados en la manipulación de alimentos.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Determill.png",
+    "descripcionLarga": "Determill es un detergente industrial desengrasante, espumoso y con abrasivos. Al contacto con el agua produce gran cantidad de espuma y elimina con facilidad la grasa, tierra o cualquier suciedad existente. No posee olor, siendo ideal para higiene de tanques de leche, pezoneras e instrumentos utilizados en la manipulación de alimentos.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767589510/ocam/productos/lecherias/determill_wbi7d4.png",
     "presentaciones": ["5 kg", "2 kg", "1 kg"],
     "usos": [
       "Lavado de tanques de leche, lavado de moldes para queso, pisos y paredes de industrias alimenticias",
@@ -267,7 +269,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Detergente líquido espumoso para uso manual y automático, diseñado para remoción de grasa de leche.",
     "descripcionLarga": "Espuxil es un detergente líquido espumoso para uso manual y automático, diseñado para la remoción de la grasa de leche impregnada en aquellos utensilios empleados en el ordeño: Pezoneras, tarros, baldes y tanques de enfriamiento. Este detergente genera gran cantidad de espuma, no deja olor y no deja residuos en los utensilios lavados. Elimina todo tipo de grasas y suciedades.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Espuxil-2.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590560/ocam/productos/lecherias/espuxil_hzt7wq.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Limpieza de tanques de leche",
@@ -309,7 +311,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto de amplio poder desinfectante que combate bacterias, gérmenes, virus, levaduras y hongos.",
     "descripcionLarga": "Formalina es un producto de amplio poder desinfectante, combate bacterias, gérmenes, virus, levaduras, hongos y más. Esencial para la desinfección de superficies de recintos industriales y agrícolas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Formalina-37.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590426/ocam/productos/lecherias/formalina_ofxzfc.png",
     "presentaciones": ["3.785 litros", "1 litro", "500 ml"],
     "usos": [
       "Desinfección de galerones, pisos, paredes y demás recintos",
@@ -404,15 +406,15 @@
     ]
   },
   {
-    "id": "multiplex-industrial",
-    "nombre": "Multiplex Industrial",
+    "id": "brillim-desengrasante-industrial",
+    "nombre": "Brillim Desengrasante Industrial",
     "categorias": ["automotriz"],
     "descripcionCorta": "Desengrasante industrial de alta potencia para casos difíciles en superficies industriales y automotrices.",
-    "descripcionLarga": "Múltiplex es el limpiador desengrasante por excelencia especial para los casos difíciles, donde un limpiador normal no funciona. Múltiplex elimina todo tipo de suciedad y grasa, presente en cualquier tipo de superficie como cuero, resina, metal, plástico, etc.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Desengrasante-De-Uso-Industrial.png",
+    "descripcionLarga": "Brillim Desengrasante Industrial es un limpiador desengrasante de alta potencia especial para casos difíciles, donde un limpiador normal no funciona. Elimina todo tipo de suciedad y grasa presente en cualquier tipo de superficie como cuero, resina, metal, plástico, motores y piezas automotrices. Su fórmula concentrada penetra profundamente para remover hasta las grasas más difíciles de manera rápida y efectiva.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767564605/ocam/productos/automotriz/brillim-desengrasante-industrial_jkgmgc.png",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": [
-      "Aplíquese Múltiplex puro y en forma abundante sobre la superficie a limpiar o desengrasar",
+      "Aplíquese puro y en forma abundante sobre la superficie a limpiar o desengrasar",
       "Espere unos segundos y frote vigorosamente",
       "Aplíquelo y déjelo permanecer unos segundos para que ataque manchas y acumulaciones de grasa y luego enjuague con agua"
     ]
@@ -448,12 +450,12 @@
     "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Potasa.png"
   },
   {
-    "id": "shampoo-car-sin-cera",
-    "nombre": "Shampoo Car Sin Cera",
+    "id": "shampoo-car-concentrado",
+    "nombre": "Shampoo Car Concentrado",
     "categorias": ["automotriz"],
-    "descripcionCorta": "Shampoo para carros formulado con bases silicónicas que resaltan el brillo de la pintura sin cera.",
-    "descripcionLarga": "El shampoo para carros 'Shampoo Car' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Shampoo-Car.png",
+    "descripcionCorta": "Shampoo concentrado para autos que protege la pintura, abrillanta y aromatiza su automóvil.",
+    "descripcionLarga": "Shampoo Car Concentrado está formulado con excelentes bases que protegen la pintura de su automóvil mientras la limpian. Contiene detergentes y aditivos especializados para remover la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio y dejando un acabado brillante. Su fórmula concentrada rinde más y deja un agradable aroma en su automóvil.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767564371/ocam/productos/automotriz/shampoocar-concentrado_kmmp7a.png",
     "usos": [
       "Para el lavado de automóviles, buses, camiones, motos y cualquier tipo de carros",
       "Es usado tanto en el lavado de partes metálicas, como plásticas o hule"
