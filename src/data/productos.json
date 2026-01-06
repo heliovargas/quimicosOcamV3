@@ -197,6 +197,21 @@
     ]
   },
   {
+    "id": "desatorador",
+    "nombre": "Desatorador",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Producto químico de alta potencia para desatascar tuberías y desagües obstruidos de manera rápida y efectiva.",
+    "descripcionLarga": "Desatorador OCAM es un producto químico especializado formulado con ingredientes de alta potencia para desatascar y desobstruir tuberías, desagües, lavamanos y fregaderos. Su fórmula concentrada disuelve eficazmente acumulaciones de cabello, grasa, residuos de jabón y materia orgánica que causan obstrucciones en las tuberías. Actúa rápidamente penetrando y desintegrando los bloqueos más difíciles, restaurando el flujo normal del agua en cañerías y sifones.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767722540/ocam/productos/hogar/desatorador_baculb.png",
+    "presentaciones": ["1 litro"],
+    "usos": [
+      "Desobstrucción de tuberías de lavamanos, fregaderos y lavaplatos",
+      "Eliminación de obstrucciones causadas por cabello, grasa y residuos orgánicos",
+      "Limpieza y mantenimiento preventivo de desagües y cañerías",
+      "Desatascamiento de sifones y tuberías de baños y cocinas"
+    ]
+  },
+  {
     "id": "desinfectante-ocam",
     "nombre": "Desinfectante OCAM Poderoso",
     "categorias": ["domestico"],
@@ -228,7 +243,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Formulado con mezcla balanceada de abrasivos que limpian a fondo sin dañar los tejidos, ideal para prendas finas.",
     "descripcionLarga": "El detergente líquido para ropa está formulado con una mezcla balanceada de abrasivos capaces de quitar la suciedad, sulfactantes y agentes espumosos que limpian a fondo sin dañar los tejidos. Posee gran cantidad de espuma y un agradable aroma que deja la ropa suave, limpia y olorosa. Se recomienda para prendas finas y ropas que se necesita que no pierdan su color.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Detergente-Liquido-Para-Ropa.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767722181/ocam/productos/hogar/detergente-liquido_jx4hqg.png",
     "presentaciones": ["3.785 litros", "1800 ml", "1000 ml"],
     "usos": [
       "Lavado de ropa en lavadora y también para el lavado a mano",
@@ -425,7 +440,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador desengrasante con pH neutro ideal para superficies delicadas que requieren limpieza profunda sin dañar.",
     "descripcionLarga": "Múltiplex Neutro es un limpiador desengrasante de pH balanceado especialmente formulado para superficies delicadas que requieren una limpieza profunda sin el riesgo de daño por alcalinidad. Mantiene todas las propiedades de limpieza de la línea Multiplex pero con un pH neutro que lo hace seguro para todo tipo de materiales sensibles, incluyendo aluminio, acero inoxidable y superficies pintadas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Multiplex-Desengrasante-Neutro.png"
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767721678/ocam/productos/hogar/multiplex-neutro_xrg0ab.png"
   },
   {
     "id": "pomes-crema-quita-grasa",

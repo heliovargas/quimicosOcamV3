@@ -25,6 +25,8 @@ const locationPoints: LocationPoint[] = [
   { name: 'San Ramón', coordinates: [10.0875, -84.4686], zone: 'Alajuela', strength: 'high' },
   { name: 'Sarchí', coordinates: [10.0917, -84.3472], zone: 'Alajuela', strength: 'high' },
   { name: 'Zarcero', coordinates: [10.1764, -84.3972], zone: 'Alajuela', strength: 'high' },
+  { name: 'Upala', coordinates: [10.8947, -85.0161], zone: 'Alajuela', strength: 'high' },
+
 
   { name: 'Santo Domingo', coordinates: [9.9742, -84.0889], zone: 'Heredia', strength: 'new', isMain: true },
   { name: 'Santa Bárbara', coordinates: [10.0347, -84.1778], zone: 'Heredia', strength: 'new' },
@@ -55,7 +57,7 @@ const baseLocation: LocationPoint = {
 };
 
 const zoneDescriptions: Record<string, { title: string; cities: number }> = {
-  'Alajuela': { title: 'Alajuela', cities: 10 },
+  'Alajuela': { title: 'Alajuela', cities: 11 },
   'Heredia': { title: 'Heredia', cities: 3 },
   'Puntarenas': { title: 'Puntarenas', cities: 2 },
   'Guanacaste': { title: 'Guanacaste', cities: 9 },
@@ -123,10 +125,10 @@ export default function LeafletCoverageMap() {
           transform: translate(-50%, -50%);
         ">
           ${renderToString(
-            isBase ? <Building2 size={iconSize} color="white" /> :
-            point.isMain ? <Store size={iconSize} color="white" /> :
-            <MapPin size={iconSize} color="white" />
-          )}
+      isBase ? <Building2 size={iconSize} color="white" /> :
+        point.isMain ? <Store size={iconSize} color="white" /> :
+          <MapPin size={iconSize} color="white" />
+    )}
         </div>
       </div>
     `;
