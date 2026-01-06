@@ -94,8 +94,8 @@
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Implementos de lechería y tanques de enfriamiento", "Potabilización del agua", "Desinfección de superficies y pisos"]
   },
   {
-    "id": "superclor-granulado-70",
-    "nombre": "Cloro Granulado 70%",
+    "id": "superclor-granulado",
+    "nombre": "Cloro Granulado",
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto altamente concentrado en hipoclorito de calcio para eliminar bacterias, hongos y algas.",
     "descripcionLarga": "Superclor granulado es un producto altamente concentrado en hipoclorito de calcio, ingrediente capaz de eliminar cualquier tipo de bacteria, hongo o alga presente en cualquier superficie, líquido o sustancia viscosa. En el tratamiento de aguas de piscina, se usa para el mantenimiento diario, en la dosis recomendada por nuestros asesores.",
@@ -297,7 +297,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Detergente alcalino de espuma controlada para limpieza y desinfección de tuberías de equipos de ordeño.",
     "descripcionLarga": "FM-500 es un detergente alcalino de espuma controlada para la limpieza y desinfección de las tuberías de equipos de ordeño de circuito cerrado automáticos y semiautomáticos. También para el lavado de tanques de leche con sistema automático. FM-500 está formulado con ingredientes que atacan la grasa emulsificándola, agentes dispersantes que impiden que las partículas desprendidas de las tuberías se depositen nuevamente en ellas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/FM-500.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767719471/ocam/productos/lecherias/detergente-fm-500_r4bviw.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Lavado de equipo de ordeño",
@@ -447,7 +447,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto esencial para prevención de obstrucciones en tuberías y eliminación de hongos.",
     "descripcionLarga": "Potasa es el producto esencial para la prevención de obstrucciones en tuberías de desagües y sifones. Elimina las aglomeraciones de grasa y materia orgánica presentes en estos sitios. También es usado como un excelente anti-hongos para cualquier superficie que el agua no dañe.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Potasa.png"
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720788/ocam/productos/hogar/potasa_yongae.png"
   },
   {
     "id": "shampoo-car-concentrado",
@@ -467,7 +467,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto de naturaleza ácida que remueve incrustaciones de piedra de leche e impide su formación.",
     "descripcionLarga": "Shu-Ácido es un producto de naturaleza ácida, usado con regularidad en los equipos de ordeño y plantas procesadoras de leche, remueve las incrustaciones de piedra de leche e impide su formación. Se recomienda su uso diario después del lavado con FM-500 detergente alcalino.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Shu-acido.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767719348/ocam/productos/lecherias/shu-acido_c9rgxk.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para el lavado de equipos de ordeños automáticos y semiautomáticos",
@@ -481,7 +481,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Poderoso desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor 12% es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Superclor-12.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720733/ocam/productos/hogar/superclor-12-domestico_ezvxke.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para la limpieza y desinfección de equipos de ordeño, implementos de lechería y tanques de enfriamiento de leche",
@@ -496,7 +496,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para instalaciones industriales, hoteles, escuelas y plantas procesadoras.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro capaz de eliminar una amplia gama de microorganismos presentes en instalaciones industriales e institucionales, tales como hoteles, escuelas, y plantas procesadoras de alimentos.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Superclor-4.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720609/ocam/productos/hogar/superclor-4-domestico_gujgrx.png",
     "presentaciones": ["3.785 litros", "1.800 litros"],
     "usos": [
       "Para la limpieza y desinfección de cualquier tipo de superficie que el agua no dañe",
@@ -509,7 +509,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Superclor-6.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720690/ocam/productos/hogar/superclor-6-domestico_g3ffnq.png",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para la limpieza y desinfección de equipos de ordeño, implementos de lechería y tanques de enfriamiento de leche",
