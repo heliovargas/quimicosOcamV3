@@ -5,7 +5,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto especializado para resaltar el brillo natural en pisos de mosaico, terrazo y terrazín.",
     "descripcionLarga": "El abrillantador de pisos es un producto para resaltar el brillo natural y para restablecer el brillo perdido por el tiempo y el uso continuo en sus pisos lujados, de mosaico o terrazo. Posee resinas sintéticas que protegen contra derrames de líquidos y restablecen el brillo perdido, solo con aplicar en forma abundante, sin necesidad de frotar. Además deja un agradable aroma donde sea aplicado.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Abrillantador-de-Piso-768x768.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738130/ocam/productos/hogar/abrillantador-pisos-mosaico_c4dtkv.png",
     "presentaciones": ["3.785 litros", "1.800 litros", "1 litro"],
     "usos": ["Pisos de mosaico, terrazo o terrazín", "Pisos lujados con cemento o con ocre rojo, verde y cualquier color"]
   },
@@ -54,12 +54,22 @@
     "usos": ["Lavado de automóviles, buses, camiones y motos", "Lavado de partes metálicas, plásticas o de hule"]
   },
   {
-    "id": "brillosa-cera-pisos",
-    "nombre": "Brillosa Cera para Pisos",
+    "id": "brillosa-cera-pisos-roja",
+    "nombre": "Brillosa Cera para Pisos Roja",
     "categorias": ["domestico"],
     "descripcionCorta": "Formulada con resinas antideslizantes y sintéticas para sellar, proteger y dar brillo a pisos.",
     "descripcionLarga": "Brillosa ha sido formulada con resinas antideslizantes y sintéticas especiales para sellar los micro-poros de los pisos, proteger la superficie y dar brillo cuando se frota. Se ofrece en dos tipos: Brillosa roja y Brillosa blanca, según sea su necesidad.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Cera-liquida-para-pisos.png",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738978/ocam/productos/hogar/cera-liquida-pisos-roja_idvth1.png",
+    "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
+    "usos": ["Pisos de vinil, loseta, terrazo, mosaico", "Pisos de cerámica, mármol"]
+  },
+  {
+    "id": "brillosa-cera-pisos-blanca",
+    "nombre": "Brillosa Cera para Pisos Blanca",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Formulada con resinas antideslizantes y sintéticas para sellar, proteger y dar brillo a pisos.",
+    "descripcionLarga": "Brillosa ha sido formulada con resinas antideslizantes y sintéticas especiales para sellar los micro-poros de los pisos, proteger la superficie y dar brillo cuando se frota. Se ofrece en dos tipos: Brillosa roja y Brillosa blanca, según sea su necesidad.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738975/ocam/productos/hogar/cera-liquida-pisos-blanca_dg54rn.png",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": ["Pisos de vinil, loseta, terrazo, mosaico", "Pisos de cerámica, mármol"]
   },
@@ -355,12 +365,12 @@
   },
   {
     "id": "glas-limpia-vidrios",
-    "nombre": "Glass Limpia Vidrios",
+    "nombre": "Limpiador de Vidrios OCAM",
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador de vidrios y cristales con propiedad antiempañante que elimina todo tipo de suciedad.",
-    "descripcionLarga": "Glas es un limpiador de vidrios y cristales, con propiedad antiempañante, el cual además de eliminar la suciedad de los vidrios, evita que estos se empañen. Los ingredientes especializados de 'Glas' remueven grasa o aceite, polvo, tierra, sustancias azucaradas y todo tipo de suciedad presente en los vidrios.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Glas.png",
-    "presentaciones": ["800 ml con atomizador", "3.785 litros", "1.800 ml", "1000 ml"],
+    "descripcionLarga": "Limpiador de Vidrios OCAM es un limpiador de vidrios y cristales, con propiedad antiempañante, el cual además de eliminar la suciedad de los vidrios, evita que estos se empañen. Los ingredientes especializados remueven grasa o aceite, polvo, tierra, sustancias azucaradas y todo tipo de suciedad presente en los vidrios.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767741444/ocam/productos/hogar/limpiador-vidrios_af69hj.png",
+    "presentaciones": ["870 ml"],
     "usos": [
       "Limpia y evita el empañamiento de parabrisas de automóviles",
       "Deja los espejos relucientes",
@@ -558,6 +568,86 @@
     "usos": [
       "Para sellar y desinfectar completamente los pezones de las vacas",
       "Para prevenir mastitis y enfermedades infecciosas"
+    ]
+  },
+  {
+    "id": "suavizante-determil",
+    "nombre": "Suavizante Determil Aroma Primavera",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Suavizante para ropa con aroma primavera que deja las prendas suaves, frescas y agradablemente perfumadas.",
+    "descripcionLarga": "Suavizante Determil está formulado con ingredientes especializados que suavizan las fibras de la ropa, reducen la electricidad estática y facilitan el planchado. Su delicada fragancia a primavera con notas florales permanece en las prendas por más tiempo, dejando su ropa suave al tacto y con un aroma fresco y agradable. Compatible con todo tipo de telas, tanto en lavado a mano como en lavadora automática o semiautomática.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740259/ocam/productos/hogar/suavizante-determil_acgkf6.png",
+    "presentaciones": ["1000 ml"],
+    "usos": [
+      "Suavizado de ropa en lavado a mano o en lavadora",
+      "Todo tipo de telas: algodón, sintéticos, toallas y ropa de cama",
+      "Reduce la electricidad estática y facilita el planchado",
+      "Deja un aroma fresco y duradero en las prendas"
+    ]
+  },
+  {
+    "id": "suavizante-ocam-floral",
+    "nombre": "Suavizante OCAM Aroma Floral",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Suavizante para ropa con intenso aroma floral que cuida las fibras y deja un perfume duradero.",
+    "descripcionLarga": "Suavizante OCAM Floral es un producto de alta calidad formulado para cuidar y suavizar las fibras de sus prendas mientras les brinda un intenso y agradable aroma floral. Su fórmula concentrada penetra en las fibras textiles proporcionando suavidad, reduciendo la formación de arrugas y facilitando el proceso de planchado. Ideal para todo tipo de telas, incluyendo toallas, sábanas, ropa de cama y prendas delicadas. Su fragancia floral perdura por varios días, manteniendo su ropa fresca y perfumada.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740260/ocam/productos/hogar/suavizante-ocam-floral_qpctyw.png",
+    "presentaciones": ["1000 ml"],
+    "usos": [
+      "Suavizado de todo tipo de telas en lavadora o a mano",
+      "Ropa de cama, toallas y prendas del hogar",
+      "Facilita el planchado y reduce la formación de arrugas",
+      "Proporciona aroma floral fresco y duradero"
+    ]
+  },
+  {
+    "id": "suavizante-baby-ocam",
+    "nombre": "Suavizante OCAM Baby",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Suavizante especial para ropa de bebé, hipoalergénico y con fragancia suave que cuida la piel sensible.",
+    "descripcionLarga": "Suavizante OCAM Baby ha sido especialmente formulado para el cuidado de la ropa de bebés y personas con piel sensible. Su fórmula hipoalergénica y dermatológicamente probada suaviza las prendas sin irritar la piel delicada de los más pequeños. Contiene agentes emolientes que mantienen las fibras suaves y esponjosas, especialmente en toallas, pañales de tela, cobijas y ropa de bebé. Su suave fragancia no es invasiva y proporciona frescura sin ser abrumadora. Libre de componentes agresivos, es ideal para prendas que están en contacto directo con la piel sensible de bebés y niños pequeños.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740259/ocam/productos/hogar/suavizante-baby-ocam_pmtxvh.png",
+    "presentaciones": ["1000 ml"],
+    "usos": [
+      "Especialmente formulado para ropa de bebé y niños pequeños",
+      "Prendas de personas con piel sensible o alergias",
+      "Toallas, pañales de tela, cobijas y ropa delicada",
+      "Suaviza sin irritar la piel sensible",
+      "Ideal para prendas en contacto directo con la piel"
+    ]
+  },
+  {
+    "id": "aceite-citronela",
+    "nombre": "Aceite de Citronela",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Repelente natural de insectos y mosquitos elaborado con aceite esencial de citronela de alta calidad.",
+    "descripcionLarga": "Aceite de Citronela OCAM es un repelente natural de insectos elaborado a base de aceite esencial de citronela de alta calidad. Este producto actúa como barrera protectora contra mosquitos, zancudos y otros insectos voladores, siendo una alternativa natural y efectiva para proteger espacios interiores y exteriores. Su fórmula concentrada puede aplicarse en diferentes superficies o diluirse para uso en difusores y vaporizadores. El aceite de citronela emite un aroma característico que resulta agradable para las personas pero desagradable para los insectos, manteniéndolos alejados de forma natural y segura. Ideal para uso en hogares, jardines, patios, terrazas y áreas recreativas.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740755/ocam/productos/hogar/citronela_h7kzdb.png",
+    "presentaciones": ["110 ml"],
+    "usos": [
+      "Repelente natural contra mosquitos, zancudos y otros insectos voladores",
+      "Aplicación en exteriores: jardines, patios, terrazas y áreas recreativas",
+      "Uso en interiores: hogares, habitaciones y espacios cerrados",
+      "Puede usarse en difusores, vaporizadores o aplicarse directamente en superficies",
+      "Protección natural en actividades al aire libre y camping",
+      "Seguro para uso alrededor de niños y mascotas cuando se aplica correctamente"
+    ]
+  },
+  {
+    "id": "alcohol-gel",
+    "nombre": "Alcohol en Gel Antibacterial",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Gel antibacterial para higiene de manos que elimina el 99.9% de gérmenes y bacterias sin necesidad de agua.",
+    "descripcionLarga": "Alcohol en Gel OCAM es un desinfectante antibacterial de uso tópico formulado para la higiene y desinfección de manos cuando no se dispone de agua y jabón. Su fórmula con alto contenido de alcohol elimina el 99.9% de gérmenes, bacterias y virus en segundos. Este gel de rápida absorción no deja residuos pegajosos y se seca rápidamente en las manos, dejándolas limpias, suaves y con una agradable sensación de frescura. Ideal para uso personal, familiar, en oficinas, comercios, hospitales, escuelas y cualquier lugar donde se requiera mantener las manos limpias y desinfectadas. Su presentación con dosificador permite una aplicación fácil, controlada y sin desperdicios.",
+    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740971/ocam/productos/hogar/alcohol-gel_xtufbv.png",
+    "presentaciones": ["240 ml"],
+    "usos": [
+      "Desinfección rápida de manos sin necesidad de agua",
+      "Higiene personal en oficinas, escuelas y lugares públicos",
+      "Uso en hospitales, clínicas y centros de salud",
+      "Ideal para llevar en el bolso, auto o escritorio",
+      "Prevención de contagio de enfermedades transmitidas por contacto",
+      "Uso frecuente sin resecar las manos gracias a sus agentes humectantes"
     ]
   }
 ]
