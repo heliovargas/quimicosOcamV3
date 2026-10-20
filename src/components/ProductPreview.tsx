@@ -73,7 +73,7 @@ export default function ProductPreview() {
           return (
             <Link
               key={linea.id}
-              href={`/catalogo?categoria=${linea.id}`}
+              href={`/catalogo/${linea.id}`}
               className={cn(
                 'group relative overflow-hidden rounded-panel bg-linear-to-b from-brand-50/70 to-white p-4 shadow-card ring-1 ring-slate-200/80 hover:-translate-y-1 hover:shadow-card-hover sm:p-5',
                 a.className

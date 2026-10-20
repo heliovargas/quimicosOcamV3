@@ -32,7 +32,7 @@ export default function ProductDetail({ product, showFullPageButton = false, onV
               {product.categorias.map((cat, i) => (
                 <span key={cat}>
                   {i > 0 && <span aria-hidden="true" className="mr-2 text-slate-300">·</span>}
-                  <Link href={`/catalogo?categoria=${cat}`} className="transition-colors hover:text-accent-800">
+                  <Link href={`/catalogo/${cat}`} className="transition-colors hover:text-accent-800">
                     {nombreCategoria(cat)}
                   </Link>
                 </span>

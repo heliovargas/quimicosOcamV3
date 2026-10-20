@@ -39,7 +39,7 @@ function generar(): string {
 
 - [Inicio](${sitio.url}/): quiénes somos, servicios, cobertura y contacto.
 - [Catálogo completo](${sitio.url}/catalogo): todos los productos con filtro por línea.
-${categorias.map((c) => `- [Línea ${c.nombre}](${sitio.url}/catalogo?categoria=${c.id})`).join('\n')}
+${categorias.map((c) => `- [Línea ${c.nombre}](${sitio.url}/catalogo/${c.id})`).join('\n')}
 
 ## Catálogo de productos
 

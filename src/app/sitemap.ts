@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${sitio.url}/`, lastModified: ahora, changeFrequency: 'weekly', priority: 1, images: [`${sitio.url}${sitio.logo.src}`] },
     { url: `${sitio.url}/catalogo`, lastModified: ahora, changeFrequency: 'weekly', priority: 0.9 },
     ...categorias.map((c) => ({
-      url: `${sitio.url}/catalogo?categoria=${c.id}`,
+      url: `${sitio.url}/catalogo/${c.id}`,
       lastModified: ahora,
       changeFrequency: 'weekly' as const,
       priority: 0.7,

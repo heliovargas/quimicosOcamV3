@@ -118,7 +118,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5">
               {categorias.map((c) => (
                 <li key={c.id}>
-                  <Link href={`/catalogo?categoria=${c.id}`} className={enlace}>
+                  <Link href={`/catalogo/${c.id}`} className={enlace}>
                     {c.nombre}
                   </Link>
                 </li>

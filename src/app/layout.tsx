@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     url: sitio.url,
     title: sitio.tituloOg,
     description: sitio.descripcionOg,
-    images: [{ url: sitio.logo.src, width: sitio.logo.width, height: sitio.logo.height, alt: 'Logo de Químicos OCAM' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Químicos OCAM, productos de limpieza y desinfección' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: sitio.tituloOg,
     description: sitio.descripcionOg,
-    images: [sitio.logo.src],
+    images: ['/og.png'],
   },
   other: {
     'geo.region': 'CR-A',

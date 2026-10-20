@@ -96,7 +96,7 @@ export default async function ProductoPage({ params }: Props) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: sitio.url },
       { '@type': 'ListItem', position: 2, name: 'Catálogo', item: `${sitio.url}/catalogo` },
-      { '@type': 'ListItem', position: 3, name: nombreCategoria(linea), item: `${sitio.url}/catalogo?categoria=${linea}` },
+      { '@type': 'ListItem', position: 3, name: nombreCategoria(linea), item: `${sitio.url}/catalogo/${linea}` },
       { '@type': 'ListItem', position: 4, name: product.nombre, item: url },
     ],
   };
@@ -124,7 +124,7 @@ export default async function ProductoPage({ params }: Props) {
               <ChevronRight size={14} />
             </li>
             <li className="hidden sm:block">
-              <Link href={`/catalogo?categoria=${linea}`} className="transition-colors hover:text-brand-700">
+              <Link href={`/catalogo/${linea}`} className="transition-colors hover:text-brand-700">
                 {nombreCategoria(linea)}
               </Link>
             </li>
@@ -159,7 +159,7 @@ export default async function ProductoPage({ params }: Props) {
               </h2>
             </div>
             <Link
-              href={`/catalogo?categoria=${linea}`}
+              href={`/catalogo/${linea}`}
               className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-800 sm:inline-flex"
             >
               Ver toda la línea
