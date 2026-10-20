@@ -1,130 +1,149 @@
-import { Factory, Truck, Phone, ShieldCheck, Store } from 'lucide-react';
+import { Factory, MessageCircle, Phone, Quote, ShieldCheck, Store, Truck } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { whatsappUrl } from '../data/empresa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { cn } from '../utils/cn';
+import { Button, Section } from './ui';
 
-const services = [
+type Servicio = {
+  icono: LucideIcon;
+  titulo: string;
+  texto: string;
+  /** Las dos primeras van grandes, con tinte azul. */
+  destacado?: boolean;
+};
+
+const servicios: Servicio[] = [
   {
-    icon: Factory,
-    title: 'Producción',
-    description: 'Nuestra amplia experiencia nos ha permitido desarrollar nuestras propias fórmulas de productos de calidad. Trabajamos con materias primas importadas, seleccionadas para ofrecer productos de calidad a bajo costo.',
-    featured: true
+    icono: Factory,
+    titulo: 'Producción',
+    destacado: true,
+    texto:
+      'Nuestra amplia experiencia nos ha permitido desarrollar nuestras propias fórmulas de productos de calidad. Trabajamos con materias primas importadas, seleccionadas para ofrecer productos de calidad a bajo costo.',
   },
   {
-    icon: Truck,
-    title: 'Distribución',
-    description: 'Nuestra red nacional de distribución cuenta con personal formado, comprometido y experto. Los años de permanencia en el mercado nos han permitido generar una alta capacidad de producción para suplir las necesidades de su empresa, comercio u hogar.',
-    featured: true
+    icono: Truck,
+    titulo: 'Distribución',
+    destacado: true,
+    texto:
+      'Nuestra red nacional de distribución cuenta con personal formado, comprometido y experto. Los años de permanencia en el mercado nos han permitido generar una alta capacidad de producción para suplir las necesidades de su empresa, comercio u hogar.',
   },
   {
-    icon: Store,
-    title: 'Ventas al Detalle',
-    description: 'Contamos con oficinas físicas las cuales puede visitar en cualquier momento para adquirir nuestros productos, y donde comprobará que la calidad de nuestros productos son conformes a estándares y reglamentos nacionales o internacionales.',
-    featured: false
+    icono: Store,
+    titulo: 'Ventas al Detalle',
+    texto:
+      'Contamos con oficinas físicas las cuales puede visitar en cualquier momento para adquirir nuestros productos, y donde comprobará que la calidad de nuestros productos son conformes a estándares y reglamentos nacionales o internacionales.',
   },
   {
-    icon: Phone,
-    title: 'Asistencia Telefónica',
-    description: 'Le ayudamos con cualquier consulta sobre nuestros productos, procesos o servicios. Póngase en contacto con nosotros. Será un gusto servirle.',
-    featured: false
+    icono: Phone,
+    titulo: 'Asistencia Telefónica',
+    texto:
+      'Le ayudamos con cualquier consulta sobre nuestros productos, procesos o servicios. Póngase en contacto con nosotros. Será un gusto servirle.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Garantías',
-    description: 'Nuestros productos y servicios cumplen con los estándares y las regulaciones nacionales. Contamos con regentes profesionales, que llevan a cabo las respectivas inspecciones de los procesos productivos y control de calidad.',
-    featured: false
-  }
+    icono: ShieldCheck,
+    titulo: 'Garantías',
+    texto:
+      'Nuestros productos y servicios cumplen con los estándares y las regulaciones nacionales. Contamos con regentes profesionales, que llevan a cabo las respectivas inspecciones de los procesos productivos y control de calidad.',
+  },
 ];
 
+/** Entrada en cascada: cada tarjeta espera un poco más que la anterior. */
+const entrada = (visible: boolean, i = 0) => ({
+  className: cn('transition-all duration-700 ease-out', visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'),
+  style: { transitionDelay: `${i * 110}ms` },
+});
+
 export default function Services() {
-  const featuredServices = services.filter(s => s.featured);
-  const regularServices = services.filter(s => !s.featured);
-  const featuredAnim = useScrollAnimation();
-  const regularAnim = useScrollAnimation();
-  const bannerAnim = useScrollAnimation();
+  const tarjetas = useScrollAnimation();
+  const cita = useScrollAnimation();
 
   return (
-    <section id="servicios" className="relative py-12 md:py-16 lg:py-20 bg-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-[#2E5C9A] tracking-wider uppercase">Lo Que Ofrecemos</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Nuestros <span className="text-[#2E5C9A]">Servicios</span>
+    <Section id="servicios">
+      {/* Encabezado a la izquierda y botón de cotización a la derecha. */}
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-2xl">
+          <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-accent-700">
+            <span aria-hidden="true" className="h-px w-8 bg-accent-500" />
+            Lo que ofrecemos
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Nuestros <span className="text-brand-600">Servicios</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <span aria-hidden="true" className="mt-5 block h-1 w-16 rounded-full bg-linear-to-r from-brand-600 to-accent-500" />
+          <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
             Soluciones integrales que cubren toda la cadena de valor
           </p>
         </div>
-
-        <div ref={featuredAnim.ref} className={`grid lg:grid-cols-2 gap-8 mb-8 transition-all duration-700 ${featuredAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {featuredServices.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="group relative bg-gradient-to-br from-white to-gray-50 p-6 sm:p-8 lg:p-12 rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#2E5C9A] transition-all hover:shadow-2xl overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full -mr-32 -mt-32 group-hover:scale-125 transition-transform duration-500"></div>
-                <div className="relative">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all shadow-lg">
-                    <Icon className="text-white" size={36} />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div ref={regularAnim.ref} className={`grid md:grid-cols-3 gap-6 mb-16 transition-all duration-700 ${regularAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {regularServices.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="group relative bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-[#51B848] transition-all hover:shadow-xl overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-                <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
-                    <Icon className="text-white" size={24} />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div ref={bannerAnim.ref} className={`group relative cursor-default transition-all duration-700 ${bannerAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2E5C9A] to-[#51B848] rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-700"></div>
-          <div className="relative bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] p-8 sm:p-10 lg:p-16 rounded-3xl shadow-2xl overflow-hidden group-hover:shadow-3xl transition-shadow duration-500">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#51B848]/0 via-[#51B848]/20 to-[#51B848]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-            <div className="relative max-w-4xl mx-auto text-center">
-              <div className="inline-block w-16 h-1 bg-white/30 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
-              <p className="text-base sm:text-xl lg:text-2xl text-white leading-relaxed font-light mb-2">
-                Gracias a la combinación de la experiencia y conocimientos técnicos inigualables,
-              </p>
-              <p className="text-base sm:text-xl lg:text-2xl text-white leading-relaxed">
-                <span className="font-bold">OCAM</span> abarca toda la cadena de suministro, desde materias primas hasta el consumo final.
-              </p>
-              <div className="inline-block w-16 h-1 bg-white/30 rounded-full mt-6 group-hover:w-24 transition-all duration-500"></div>
-            </div>
-          </div>
-        </div>
+        <Button href={whatsappUrl('Hola, quiero información sobre sus servicios.')} variant="outline" className="shrink-0">
+          <MessageCircle size={18} className="text-whatsapp" aria-hidden="true" />
+          Cotizar por WhatsApp
+        </Button>
       </div>
-    </section>
+
+      {/* Bento: dos tarjetas grandes arriba y tres abajo, numeradas como una cadena. */}
+      <div ref={tarjetas.ref} className="mt-12 grid gap-5 md:grid-cols-6">
+        {servicios.map(({ icono: Icono, titulo, texto, destacado }, i) => {
+          const anim = entrada(tarjetas.isVisible, i);
+          return (
+            <article
+              key={titulo}
+              className={cn(
+                'group relative overflow-hidden rounded-panel p-7 shadow-card ring-1 hover:-translate-y-1 hover:shadow-card-hover',
+                destacado
+                  ? 'bg-linear-to-br from-brand-50 to-white ring-brand-100 md:col-span-3 lg:p-8'
+                  : 'bg-white ring-slate-200/80 md:col-span-2',
+                anim.className
+              )}
+              style={anim.style}
+            >
+              <Icono
+                aria-hidden="true"
+                size={destacado ? 190 : 150}
+                strokeWidth={1}
+                className={cn(
+                  'pointer-events-none absolute -right-10 -bottom-12 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6',
+                  destacado ? 'text-brand-100/80' : 'text-accent-100/70'
+                )}
+              />
+              <div className="relative flex items-center justify-between">
+                <span
+                  className={cn(
+                    'inline-flex items-center justify-center rounded-ui text-white',
+                    destacado
+                      ? 'h-12 w-12 bg-linear-to-br from-brand-500 to-brand-700 shadow-brand'
+                      : 'h-11 w-11 bg-linear-to-br from-accent-400 to-accent-600 shadow-[0_8px_20px_-8px_rgb(81_184_72/0.6)]'
+                  )}
+                >
+                  <Icono size={destacado ? 24 : 22} aria-hidden="true" />
+                </span>
+                <span className="font-display text-sm font-bold text-slate-300">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <h3 className={cn('relative mt-5 font-display font-semibold text-slate-900', destacado ? 'text-2xl' : 'text-xl')}>
+                {titulo}
+              </h3>
+              <p className="relative mt-2 max-w-prose text-[15px] leading-relaxed text-slate-600">{texto}</p>
+            </article>
+          );
+        })}
+      </div>
+
+      {/* Frase de cierre en un panel claro. */}
+      <figure
+        ref={cita.ref}
+        className={cn(
+          'relative mt-10 overflow-hidden rounded-panel bg-linear-to-r from-brand-50 via-white to-accent-50 px-7 py-9 text-center ring-1 ring-slate-200/70 sm:px-12 lg:py-12',
+          entrada(cita.isVisible).className
+        )}
+      >
+        <Quote aria-hidden="true" size={120} strokeWidth={1} className="pointer-events-none absolute -top-6 -left-4 text-brand-100" />
+        <blockquote className="relative mx-auto max-w-3xl text-lg leading-relaxed text-slate-700 sm:text-xl">
+          Gracias a la combinación de la experiencia y conocimientos técnicos inigualables,{' '}
+          <span className="font-semibold text-brand-700">OCAM</span> abarca toda la cadena de suministro, desde materias
+          primas hasta el consumo final.
+        </blockquote>
+        <span aria-hidden="true" className="relative mx-auto mt-6 block h-1 w-16 rounded-full bg-linear-to-r from-brand-600 to-accent-500" />
+      </figure>
+    </Section>
   );
 }

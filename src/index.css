@@ -1,129 +1,186 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer utilities {
-  @keyframes blob {
-    0%, 100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-  }
+/* ------------------------------------------------------------------
+   Design tokens de Químicos OCAM
+   ------------------------------------------------------------------ */
+@theme {
+  /* Azul del logo. `brand-600` es el color de marca original (#2E5C9A).
+     Fondos suaves: 50/100. Texto sobre blanco: 600+. Fondos oscuros: 800/900. */
+  --color-brand-50: #eef4fb;
+  --color-brand-100: #d9e6f6;
+  --color-brand-200: #b6cdec;
+  --color-brand-300: #8aaedf;
+  --color-brand-400: #5c8acb;
+  --color-brand-500: #3b6fb3;
+  --color-brand-600: #2e5c9a;
+  --color-brand-700: #264c80;
+  --color-brand-800: #1e3d66;
+  --color-brand-900: #172f4f;
+  --color-brand-950: #0e1d33;
+
+  /* Verde del logo. `accent-500` es el color de marca original (#51B848).
+     Para texto sobre blanco usar `accent-700` o más oscuro (contraste AA).
+     El 500 va bien en íconos, bordes y fondos, no en texto pequeño. */
+  --color-accent-50: #f0faef;
+  --color-accent-100: #ddf3da;
+  --color-accent-200: #bce7b7;
+  --color-accent-300: #91d689;
+  --color-accent-400: #6ac65f;
+  --color-accent-500: #51b848;
+  --color-accent-600: #3f9838;
+  --color-accent-700: #33782e;
+  --color-accent-800: #2b5f27;
+  --color-accent-900: #244e22;
+  --color-accent-950: #0f2b0e;
+
+  /* Rojo de la rana del logo. Solo para énfasis puntual, nunca como fondo grande ni botón. */
+  --color-frog: #e1251b;
+
+  /* Verde de WhatsApp. El teal tiene contraste AA con texto blanco; el claro no. */
+  --color-whatsapp: #128c7e;
+  --color-whatsapp-hover: #0f766a;
+  --color-whatsapp-light: #25d366;
+
+  /* Titulares: geométrica y amigable, combina con el logo sin copiarlo. Texto corrido y UI: Inter. */
+  --font-display: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+
+  /* Una sombra para tarjetas en reposo y una para hover. No usar shadow-2xl. */
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.1);
+  --shadow-card-hover: 0 2px 4px rgb(15 23 42 / 0.05), 0 16px 40px -12px rgb(15 23 42 / 0.18);
+  /* Sombra teñida para el botón primario. */
+  --shadow-brand: 0 8px 20px -8px rgb(46 92 154 / 0.5);
+
+  /* `rounded-ui` para botones, inputs y tarjetas pequeñas; `rounded-panel` para paneles grandes. */
+  --radius-ui: 0.75rem;
+  --radius-panel: 1.25rem;
+
+  /* Animaciones de entrada. Se usan como `animate-fade-in-up`, etc. */
+  --animate-fade-in-up: fadeInUp 0.8s ease-out both;
+  --animate-fade-in-left: fadeInLeft 0.8s ease-out both;
+  --animate-fade-in-right: fadeInRight 0.8s ease-out both;
+  --animate-scale-in: scaleIn 0.6s ease-out both;
+  --animate-blob: blob 7s infinite;
+  /* Hero: burbujas que suben, ola de agua y destello del logo. */
+  --animate-burbuja: burbuja 36s linear infinite;
+  --animate-ola: ola 22s linear infinite;
+  --animate-destello: destello 3.2s ease-in-out infinite;
+  --animate-reventar: reventar 0.4s ease-out forwards;
+  --animate-gota: gota 0.55s ease-out forwards;
+  /* Mapa de cobertura: las rutas punteadas avanzan desde la base. */
+  --animate-ruta: ruta 1.4s linear infinite;
 
   @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
   }
-
   @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
   }
-
   @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
   }
-
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
-  .animate-blob {
-    animation: blob 7s infinite;
+  @keyframes burbuja {
+    0% { transform: translate3d(0, 0, 0) scale(0.9); opacity: 0; }
+    8% { opacity: 1; }
+    50% { transform: translate3d(24px, -55vh, 0) scale(1); }
+    92% { opacity: 1; }
+    100% { transform: translate3d(-16px, -115vh, 0) scale(1.05); opacity: 0; }
   }
-
-  .animate-fade-in {
-    animation: fadeIn 0.4s ease-out forwards;
-    opacity: 0;
+  @keyframes ola {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
-
-  .animation-delay-2000 {
-    animation-delay: 2s;
+  @keyframes reventar {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
   }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
+  @keyframes gota {
+    0% { transform: translateY(0) scale(1); opacity: 0.9; }
+    100% { transform: translateY(calc(var(--salto, 60px) * -1)) scale(0.4); opacity: 0; }
   }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+  @keyframes ruta {
+    to { stroke-dashoffset: -26; }
   }
-
-  .animate-fade-in-left {
-    animation: fadeInLeft 0.8s ease-out forwards;
+  @keyframes destello {
+    0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.35; }
+    50% { transform: scale(1) rotate(45deg); opacity: 1; }
   }
-
-  .animate-fade-in-right {
-    animation: fadeInRight 0.8s ease-out forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.6s ease-out forwards;
-  }
-
-  .animation-delay-100 {
-    animation-delay: 0.1s;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 0.2s;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 0.3s;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 0.4s;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 0.5s;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 0.6s;
+  @keyframes blob {
+    0%, 100% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
   }
 }
+
+/* ------------------------------------------------------------------
+   Base
+   ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Los anchors (#nosotros, etc.) aterrizan debajo del navbar fijo. */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-700 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-slate-900;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------
+   Utilidades propias
+   ------------------------------------------------------------------ */
+/* Igual que animate-fade-in-up pero arranca oculto: evita el parpadeo cuando hay delay. */
+@utility animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+@utility animation-delay-100 { animation-delay: 0.1s; }
+@utility animation-delay-200 { animation-delay: 0.2s; }
+@utility animation-delay-300 { animation-delay: 0.3s; }
+@utility animation-delay-400 { animation-delay: 0.4s; }
+@utility animation-delay-500 { animation-delay: 0.5s; }
+@utility animation-delay-600 { animation-delay: 0.6s; }
+@utility animation-delay-2000 { animation-delay: 2s; }
+@utility animation-delay-4000 { animation-delay: 4s; }

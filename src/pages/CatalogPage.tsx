@@ -7,7 +7,7 @@ export default function CatalogPage() {
   }, []);
 
   return (
-    <div className="pt-24">
+    <div className="pt-20 sm:pt-24">
       <Catalog />
     </div>
   );

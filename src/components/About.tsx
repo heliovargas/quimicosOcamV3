@@ -1,142 +1,214 @@
-import { Target, Heart, TrendingUp, Beaker, Award, Users } from 'lucide-react';
+import { Award, Beaker, Check, Heart, Target, TrendingUp, Users } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { cn } from '../utils/cn';
+import { Section } from './ui';
+
+type Bloque = {
+  icono: LucideIcon;
+  titulo: string;
+  parrafos: string[];
+  /** Verde para los bloques que antes iban en verde. */
+  acento?: boolean;
+};
+
+const bloques: Bloque[] = [
+  {
+    icono: Beaker,
+    titulo: 'Tecnología e Innovación',
+    parrafos: [
+      'OCAM Productos de Limpieza es una compañía dirigida a la producción de productos de limpieza, considerada líder en área de distribución en la Zona Norte de nuestro país, gracias a la calidad e integridad que ofrecemos.',
+      'Nuestra tecnología nos permite la creación de fórmulas para productos de limpieza y desinfección, desarrolladas bajo las más estrictas normas de calidad, con materias primas importadas y con el menor costo económico posible.',
+    ],
+  },
+  {
+    icono: Heart,
+    titulo: 'Compromiso Social',
+    acento: true,
+    parrafos: [
+      'En OCAM nos solidarizamos con el sector doméstico, lechero e industrial, poniendo en sus manos productos de alta calidad a precios accesibles, ampliamente probados y debidamente registrados en el Ministerio de Salud.',
+    ],
+  },
+  {
+    icono: Users,
+    titulo: 'Equipo y Capacidad',
+    parrafos: [
+      'Contamos con personal especializado en el área de producción, distribución y agentes de ventas, que con gusto le atenderán. Así como una red de comercios abastecidos a lo largo de diferentes cantones del país.',
+      'Nuestra amplia experiencia y alta capacidad de producción nos permite suplir las necesidades de su empresa, comercio u hogar con la mayor rapidez, facilidad y eficacia.',
+    ],
+  },
+  {
+    icono: Award,
+    titulo: 'Nuestra Promesa',
+    parrafos: [
+      'Nos comprometemos con usted al ofrecerle los mejores productos y servicios. Puede confiar en que con nosotros siempre contará con que todos nuestros artículos se encuentran disponibles para entrega inmediata.',
+    ],
+  },
+];
+
+const datos = [
+  'Producción propia desde 1998',
+  'Para el sector doméstico, lechero e industrial',
+  'Productos registrados en el Ministerio de Salud',
+];
+
+type Identidad = { icono: LucideIcon; titulo: string; texto: string; acento?: boolean; etiqueta?: string };
+
+const identidad: Identidad[] = [
+  {
+    icono: Target,
+    titulo: 'Visión',
+    texto:
+      'Aspiramos a ser una de las fábricas de productos de limpieza más competitiva y productiva del país, con procesos de mejora continua que nos mantienen a la vanguardia.',
+  },
+  {
+    icono: Heart,
+    titulo: 'Valores',
+    acento: true,
+    texto:
+      'Integridad, innovación y espíritu emprendedor. Estos valores nos guían en todo lo que hacemos y son la base de nuestra organización.',
+  },
+  {
+    icono: TrendingUp,
+    titulo: 'Historia',
+    etiqueta: 'Desde 1998',
+    texto:
+      'Desde 1998 hemos crecido constantemente hasta alcanzar nuestro actual nivel de liderazgo sectorial mediante la mejora e innovación continuas.',
+  },
+];
+
+/** Entrada en cascada: cada elemento espera un poco más que el anterior. */
+const entrada = (visible: boolean, i = 0) => ({
+  className: cn('transition-all duration-700 ease-out', visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'),
+  style: { transitionDelay: `${i * 120}ms` },
+});
 
 export default function About() {
-  const card1 = useScrollAnimation();
-  const card2 = useScrollAnimation();
-  const card3 = useScrollAnimation();
-  const card4 = useScrollAnimation();
-  const visionCards = useScrollAnimation();
+  const lista = useScrollAnimation();
+  const fila = useScrollAnimation();
+
   return (
-    <section id="nosotros" className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+    <Section id="nosotros">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        {/* Título y detalles. En escritorio se queda fijo mientras se recorren los bloques. */}
+        <div className="lg:col-span-5">
+          <div className="lg:sticky lg:top-28">
+            <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-accent-700">
+              <span aria-hidden="true" className="h-px w-8 bg-accent-500" />
+              Sobre nosotros
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Líderes en <span className="text-brand-600">la Zona Norte</span>
+            </h2>
+            <span aria-hidden="true" className="mt-5 block h-1 w-16 rounded-full bg-linear-to-r from-brand-600 to-accent-500" />
+            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Más de 20 años produciendo y distribuyendo productos químicos de calidad certificada
+            </p>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-[#2E5C9A] tracking-wider uppercase">Sobre Nosotros</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Líderes en <span className="text-[#2E5C9A]">Productos de Limpieza</span>
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Más de 20 años produciendo y distribuyendo productos químicos de calidad certificada
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-8">
-            <div ref={card1.ref} className={`bg-white p-6 lg:p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ${card1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-4 sm:mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Beaker className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Tecnología e Innovación</h3>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
-                    <span className="font-bold text-[#2E5C9A]">OCAM Productos de Limpieza</span> es una compañía dirigida a la producción de productos de limpieza, considerada líder en área de distribución en la Zona Norte de nuestro país, gracias a la calidad e integridad que ofrecemos.
-                  </p>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                    Nuestra tecnología nos permite la creación de fórmulas para productos de limpieza y desinfección, desarrolladas bajo las más estrictas normas de calidad, con materias primas importadas y con el menor costo económico posible.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div ref={card2.ref} className={`bg-gradient-to-br from-[#51B848] to-[#3d8f38] p-6 lg:p-10 rounded-3xl shadow-xl text-white transition-all duration-700 ${card2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Heart className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Compromiso Social</h3>
-                  <p className="text-sm sm:text-base leading-relaxed">
-                    En OCAM nos solidarizamos con el sector doméstico, lechero e industrial, poniendo en sus manos productos de alta calidad a precios accesibles, ampliamente probados y debidamente registrados en el Ministerio de Salud.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div ref={card3.ref} className={`bg-white p-6 lg:p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ${card3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-4 sm:mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Users className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Equipo y Capacidad</h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Contamos con personal especializado en el área de producción, distribución y agentes de ventas, que con gusto le atenderán. Así como una red de comercios abastecidos a lo largo de diferentes cantones del país.
-                  </p>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                    Nuestra amplia experiencia y alta capacidad de producción nos permite suplir las necesidades de su empresa, comercio u hogar con la mayor rapidez, facilidad y eficacia.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div ref={card4.ref} className={`bg-white p-6 lg:p-10 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-700 ${card4.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-4 sm:mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Award className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Nuestra Promesa</h3>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                    Nos comprometemos con usted al ofrecerle los mejores productos y servicios. Puede confiar en que con nosotros siempre contará con que todos nuestros artículos se encuentran disponibles para entrega inmediata.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ul className="mt-8 space-y-3">
+              {datos.map((d) => (
+                <li key={d} className="flex items-center gap-3 text-[15px] text-slate-700">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                    <Check size={14} strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  {d}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div ref={visionCards.ref} className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 ${visionCards.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="group relative bg-white p-6 sm:p-10 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#2E5C9A] transition-all hover:shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-            <div className="relative">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Target className="text-white" size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Visión</h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                Aspiramos a ser una de las fábricas de productos de limpieza más competitiva y productiva del país, con procesos de mejora continua que nos mantienen a la vanguardia.
-              </p>
-            </div>
-          </div>
-
-          <div className="group relative bg-gradient-to-br from-[#51B848] to-[#3d8f38] p-6 sm:p-10 rounded-2xl shadow-lg text-white hover:shadow-2xl transition-all overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-            <div className="relative">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Heart className="text-white" size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">Valores</h3>
-              <p className="text-sm sm:text-base leading-relaxed text-white/95">
-                Integridad, innovación y espíritu emprendedor. Estos valores nos guían en todo lo que hacemos y son la base de nuestra organización.
-              </p>
-            </div>
-          </div>
-
-          <div className="group relative bg-white p-6 sm:p-10 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#2E5C9A] transition-all hover:shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
-            <div className="relative">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <TrendingUp className="text-white" size={28} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Historia</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Desde 1998 hemos crecido constantemente hasta alcanzar nuestro actual nivel de liderazgo sectorial mediante la mejora e innovación continuas.
-              </p>
-            </div>
-          </div>
+        {/* Los cuatro bloques, numerados, entran en cascada. */}
+        <div ref={lista.ref} className="lg:col-span-7">
+          <ol className="space-y-2">
+            {bloques.map(({ icono: Icono, titulo, parrafos, acento }, i) => {
+              const anim = entrada(lista.isVisible, i);
+              return (
+                <li
+                  key={titulo}
+                  className={cn('group relative -mx-5 rounded-panel px-5 py-6 hover:bg-brand-50/60', anim.className)}
+                  style={anim.style}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-4 right-5 hidden font-display text-6xl font-bold text-slate-100 transition-colors group-hover:text-brand-100 sm:block"
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="relative flex gap-5">
+                    <span
+                      className={cn(
+                        'flex h-12 w-12 shrink-0 items-center justify-center rounded-ui text-white transition-transform duration-300 group-hover:scale-105',
+                        acento
+                          ? 'bg-linear-to-br from-accent-400 to-accent-600 shadow-[0_8px_20px_-8px_rgb(81_184_72/0.6)]'
+                          : 'bg-linear-to-br from-brand-500 to-brand-700 shadow-brand'
+                      )}
+                    >
+                      <Icono size={22} aria-hidden="true" />
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-slate-900">{titulo}</h3>
+                      <div className="mt-2 space-y-3 text-[15px] leading-relaxed text-slate-600">
+                        {parrafos.map((p) => (
+                          <p key={p.slice(0, 24)}>{p}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </div>
-    </section>
+
+      {/* Visión, Valores e Historia: tres tarjetas iguales con filete de marca, chip en degradado y marca de agua. */}
+      <div ref={fila.ref} className="mt-16 grid gap-5 md:grid-cols-3">
+        {identidad.map(({ icono: Icono, titulo, texto, acento, etiqueta }, i) => {
+          const anim = entrada(fila.isVisible, i);
+          return (
+            <article
+              key={titulo}
+              className={cn(
+                'group relative overflow-hidden rounded-panel bg-white p-7 shadow-card ring-1 ring-slate-200/80 hover:-translate-y-1 hover:shadow-card-hover',
+                acento ? 'bg-linear-to-b from-white to-accent-50/50' : 'bg-linear-to-b from-white to-brand-50/50',
+                anim.className
+              )}
+              style={anim.style}
+            >
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-brand-600 to-accent-500" />
+              <Icono
+                aria-hidden="true"
+                size={150}
+                strokeWidth={1}
+                className={cn(
+                  'pointer-events-none absolute -right-8 -bottom-10 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6',
+                  acento ? 'text-accent-100/70' : 'text-brand-100/70'
+                )}
+              />
+              <div className="relative flex items-center justify-between">
+                <span
+                  className={cn(
+                    'inline-flex h-11 w-11 items-center justify-center rounded-ui text-white',
+                    acento
+                      ? 'bg-linear-to-br from-accent-400 to-accent-600 shadow-[0_8px_20px_-8px_rgb(81_184_72/0.6)]'
+                      : 'bg-linear-to-br from-brand-500 to-brand-700 shadow-brand'
+                  )}
+                >
+                  <Icono size={22} aria-hidden="true" />
+                </span>
+                {etiqueta && (
+                  <span className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-700 ring-1 ring-brand-100">
+                    {etiqueta}
+                  </span>
+                )}
+              </div>
+              <h3 className="relative mt-5 font-display text-xl font-semibold text-slate-900">{titulo}</h3>
+              <p className="relative mt-2 text-[15px] leading-relaxed text-slate-600">{texto}</p>
+            </article>
+          );
+        })}
+      </div>
+    </Section>
   );
 }

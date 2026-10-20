@@ -4,7 +4,10 @@ export interface Product {
   categorias: ('piscinas' | 'lecherias' | 'automotriz' | 'domestico')[];
   descripcionCorta: string;
   descripcionLarga: string;
+  /** Foto principal, en media.quimicosocam.com (ver utils/r2.ts). */
   imageUrl: string;
+  /** Fotos adicionales (otros ángulos o aromas); se muestran como miniaturas en el detalle. */
+  galeria?: string[];
   usos?: string[];
   presentaciones?: string[];
 }

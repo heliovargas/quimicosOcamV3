@@ -1,160 +1,177 @@
-import { Phone, Mail, MapPin, ChevronRight, ExternalLink, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { ExternalLink, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { empresa, whatsappUrl } from '../data/empresa';
+import { categorias } from '../types/Product';
+import { Container } from './ui';
+
+const navegacion = [
+  { label: 'Inicio', to: '/' },
+  { label: 'Catálogo', to: '/catalogo' },
+  { label: 'Nosotros', to: '/#nosotros' },
+  { label: 'Servicios', to: '/#servicios' },
+  { label: 'Cobertura', to: '/#cobertura' },
+  { label: 'Contacto', to: '/#contacto' },
+];
+
+const redes = [
+  { nombre: 'Instagram', href: empresa.redes.instagram, icono: Instagram },
+  { nombre: 'Facebook', href: empresa.redes.facebook, icono: Facebook },
+  { nombre: 'LinkedIn', href: empresa.redes.linkedin, icono: Linkedin },
+];
+
+const MAPA_URL = 'https://www.google.com/maps?q=10.441888,-84.355933';
+
+/** Misma ola del hero, invertida: la página termina "entrando al agua". */
+const OLA =
+  'M0,48 C180,96 540,0 720,48 C900,96 1260,0 1440,48 C1620,96 1980,0 2160,48 C2340,96 2700,0 2880,48 L2880,120 L0,120 Z';
+
+const enlace = 'text-[15px] text-brand-200 transition-colors hover:text-white';
+
+function Titulo({ children }: { children: string }) {
+  return (
+    <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
+      {children}
+      <span aria-hidden="true" className="mt-2 block h-0.5 w-8 rounded-full bg-linear-to-r from-brand-400 to-accent-400" />
+    </h3>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white pt-20 pb-8 overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#2E5C9A] rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#51B848] rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+    <footer className="relative isolate overflow-hidden bg-brand-950 text-brand-100">
+      {/* Ola blanca arriba y dos luces suaves de marca. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-10 rotate-180 sm:h-14">
+        <svg className="absolute bottom-0 left-0 h-full w-[200%] animate-ola [animation-duration:40s]" viewBox="0 0 2880 120" preserveAspectRatio="none">
+          <path d={OLA} fill="white" />
+        </svg>
       </div>
+      <div aria-hidden="true" className="pointer-events-none absolute -top-32 -left-32 -z-10 h-96 w-96 rounded-full bg-brand-600/25 blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-32 -bottom-32 -z-10 h-96 w-96 rounded-full bg-accent-500/10 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          <div>
-            <div className="group mb-6">
-              <img
-                src="/ocam.png"
-                alt="Químicos OCAM"
-                className="h-16 w-auto group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <p className="text-gray-400 leading-relaxed mb-6">
+      <Container className="pt-24 pb-8 sm:pt-28">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          {/* Marca */}
+          <div className="lg:col-span-4">
+            <Link to="/" className="inline-flex" aria-label="Químicos OCAM, inicio">
+              <img src="/ocam.png" alt="Químicos OCAM" className="h-14 w-auto" />
+            </Link>
+            <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-brand-200">
               Líderes en la distribución de productos químicos de limpieza en la Zona Norte del país desde 1998.
             </p>
-            <div className="flex items-center gap-4 mb-6">
-              <a
-                href="https://www.instagram.com/quimicosocam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/social"
-                aria-label="Visitar Instagram de Químicos OCAM"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center group-hover/social:scale-110 group-hover/social:shadow-lg group-hover/social:shadow-pink-500/50 transition-all">
-                  <Instagram size={20} />
-                </div>
-              </a>
-              <a
-                href="https://www.facebook.com/OCAMcr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/social"
-                aria-label="Visitar Facebook de Químicos OCAM"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover/social:scale-110 group-hover/social:shadow-lg group-hover/social:shadow-blue-500/50 transition-all">
-                  <Facebook size={20} />
-                </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/quimicosocam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/social"
-                aria-label="Visitar LinkedIn de Químicos OCAM"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-700 to-blue-800 rounded-lg flex items-center justify-center group-hover/social:scale-110 group-hover/social:shadow-lg group-hover/social:shadow-blue-600/50 transition-all">
-                  <Linkedin size={20} />
-                </div>
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-1 bg-gradient-to-r from-[#2E5C9A] to-[#51B848] rounded-full"></div>
-              <div className="w-2 h-1 bg-[#51B848] rounded-full"></div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 relative inline-block">
-              Enlaces Rápidos
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/" className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                  <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-                  <span>Inicio</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/catalogo" className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                  <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-                  <span>Catálogo</span>
-                </Link>
-              </li>
+            <ul className="mt-6 flex items-center gap-2">
+              {redes.map(({ nombre, href, icono: Icono }) => (
+                <li key={nombre}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${nombre} de Químicos OCAM`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/10 transition-colors hover:bg-white/20"
+                  >
+                    <Icono size={18} aria-hidden="true" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 relative inline-block">
-              Información de Contacto
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
-            </h3>
-            <ul className="space-y-5">
-              <li className="group">
-                <a href="https://wa.me/50661951073" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#25D366] to-[#20BA59] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">WhatsApp</p>
-                    <p className="font-semibold hover:text-[#25D366] transition-colors">+506 6195 1073</p>
-                  </div>
+          {/* Navegación */}
+          <div className="lg:col-span-2">
+            <Titulo>Navegación</Titulo>
+            <ul className="mt-5 space-y-2.5">
+              {navegacion.map((e) => (
+                <li key={e.to}>
+                  <Link to={e.to} className={enlace}>
+                    {e.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Líneas de producto */}
+          <div className="lg:col-span-3">
+            <Titulo>Líneas de producto</Titulo>
+            <ul className="mt-5 space-y-2.5">
+              {categorias.map((c) => (
+                <li key={c.id}>
+                  <Link to={`/catalogo?categoria=${c.id}`} className={enlace}>
+                    {c.nombre}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contacto */}
+          <div className="lg:col-span-3">
+            <Titulo>Contacto</Titulo>
+            <ul className="mt-5 space-y-4">
+              <li>
+                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-ui bg-white/10 text-accent-300">
+                    <MessageCircle size={16} aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block text-xs text-brand-300">WhatsApp</span>
+                    <span className="block font-semibold text-white transition-colors group-hover:text-accent-300">{empresa.telefono}</span>
+                  </span>
                 </a>
               </li>
-              <li className="group">
-                <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Mail size={18} />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">Email</p>
-                    <a href="mailto:quimicosocam@gmail.com" className="font-semibold hover:text-[#51B848] transition-colors">
-                      quimicosocam@gmail.com
-                    </a>
-                  </div>
-                </div>
+              <li>
+                <a href={`mailto:${empresa.email}`} className="group flex items-start gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-ui bg-white/10 text-accent-300">
+                    <Mail size={16} aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block text-xs text-brand-300">Email</span>
+                    <span className="block font-semibold text-white transition-colors group-hover:text-accent-300">{empresa.email}</span>
+                  </span>
+                </a>
               </li>
-              <li className="group">
-                <a
-                  href="https://maps.google.com/?q=Provincia+de+Alajuela,+Cerro+Cortez,+800m+este+del+Servicentro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/5 transition-all cursor-pointer"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <MapPin size={18} />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-gray-400 text-sm mb-1">Ubicación</p>
-                    <p className="font-semibold leading-relaxed">
-                      Provincia de Alajuela, Cerro Cortez<br />
+              <li>
+                <a href={MAPA_URL} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-ui bg-white/10 text-accent-300">
+                    <MapPin size={16} aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block text-xs text-brand-300">Ubicación</span>
+                    <span className="block font-semibold leading-snug text-white">
+                      Provincia de Alajuela, Cerro Cortez
+                      <br />
                       800m este del Servicentro
-                    </p>
-                    <p className="text-[#51B848] text-xs mt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ExternalLink size={12} />
-                      <span>Ver en Google Maps</span>
-                    </p>
-                  </div>
+                    </span>
+                    <span className="mt-1 inline-flex items-center gap-1 text-xs text-accent-300 opacity-0 transition-opacity group-hover:opacity-100">
+                      <ExternalLink size={12} aria-hidden="true" />
+                      Ver en Google Maps
+                    </span>
+                  </span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="relative border-t border-gray-800 pt-8">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-          <div className="text-center">
-            <p className="text-gray-400 text-sm leading-relaxed">
-              &copy; {new Date().getFullYear()} <span className="font-semibold text-white">Químicos OCAM S.A.</span> Todos los derechos reservados.
-              <br className="sm:hidden" />
-              <span className="hidden sm:inline"> • </span>
-              Productos registrados en el Ministerio de Salud.
-            </p>
-          </div>
+        <p className="mt-12 text-center text-[11px] text-brand-400 sm:text-right">
+          Desarrollado por{' '}
+          <a
+            href="https://distriib.com"
+            target="_blank"
+            rel="noopener"
+            className="font-medium text-brand-300 transition-colors hover:text-white"
+          >
+            distriib.com
+          </a>
+        </p>
+
+        <div className="mt-4 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-brand-300 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            &copy; {new Date().getFullYear()} <span className="font-semibold text-white">Químicos OCAM S.A.</span> Todos los
+            derechos reservados.
+          </p>
+          <p>Productos registrados en el Ministerio de Salud.</p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -1,201 +1,103 @@
-import { Users, Package, Calendar, Award } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { ArrowRight, MessageCircle, ShieldCheck } from 'lucide-react';
+import productosData from '../data/productos.json';
+import { whatsappUrl } from '../data/empresa';
+import { categorias } from '../types/Product';
+import Burbujas from './Burbujas';
+import Estanteria from './Estanteria';
+import { Button, Container } from './ui';
+
+const totalProductos = (productosData as unknown[]).length;
+
+const cifras = [
+  { valor: '+1,000', label: 'Clientes satisfechos' },
+  { valor: '+20', label: 'Años de experiencia' },
+  { valor: `+${Math.floor(totalProductos / 10) * 10}`, label: 'Productos disponibles' },
+  { valor: String(categorias.length), label: 'Líneas de producto' },
+];
+
+/** Una ola, con el periodo de 720 unidades repetido cuatro veces para que el desplazamiento del 50% cierre sin salto. */
+const OLA =
+  'M0,48 C180,96 540,0 720,48 C900,96 1260,0 1440,48 C1620,96 1980,0 2160,48 C2340,96 2700,0 2880,48 L2880,120 L0,120 Z';
 
 export default function Hero() {
-  const [counts, setCounts] = useState({ clients: 0, products: 0, years: 0, certified: 0 });
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const hasAnimated = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          animateCounters();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const animateCounters = () => {
-    const duration = 2000;
-    const targets = { clients: 1000, products: 50, years: 20, certified: 100 };
-    const steps = 60;
-    const increment = duration / steps;
-
-    let currentStep = 0;
-
-    const timer = setInterval(() => {
-      currentStep++;
-      const progress = currentStep / steps;
-
-      setCounts({
-        clients: Math.floor(targets.clients * progress),
-        products: Math.floor(targets.products * progress),
-        years: Math.floor(targets.years * progress),
-        certified: Math.floor(targets.certified * progress),
-      });
-
-      if (currentStep >= steps) {
-        setCounts(targets);
-        clearInterval(timer);
-      }
-    }, increment);
-  };
-
   return (
-    <section ref={sectionRef} id="inicio" className="relative bg-white pt-32 pb-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/923228/pexels-photo-923228.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Vista del Volcán Arenal en la Zona Norte de Costa Rica, región donde opera Químicos OCAM"
-          loading="eager"
-          className="w-full h-full object-cover opacity-15 blur-sm"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white/90 to-green-50/80"></div>
-      </div>
+    <section id="inicio" className="relative isolate overflow-hidden bg-linear-to-b from-white via-brand-50/70 to-brand-100">
+      <Burbujas />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="inline-block bg-green-100 text-green-800 px-4 py-1.5 rounded-full text-sm font-medium mb-6 opacity-0 animate-fade-in-up">
-              Más de 20 años de experiencia
+      {/* El contenedor deja pasar los clics a las burbujas; solo los bloques con contenido los capturan. */}
+      <Container className="pointer-events-none relative pt-28 pb-20 md:pt-32 md:pb-24">
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-6">
+            <div className="pointer-events-auto inline-flex items-center gap-2.5 rounded-full bg-accent-50 py-1.5 pr-4 pl-1.5 text-sm font-semibold text-accent-800 ring-1 ring-accent-200 animate-fade-in-up">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent-500 text-white">
+                <ShieldCheck size={14} aria-hidden="true" />
+              </span>
+              Certificados por el Ministerio de Salud
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight opacity-0 animate-fade-in-up animation-delay-100">
-              Soluciones profesionales para
-              <span className="text-[#2E5C9A]"> la limpieza</span>
+            <h1 className="pointer-events-auto mt-5 max-w-xl font-display text-3xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.75rem] animate-fade-in-up animation-delay-100">
+              Soluciones profesionales para{' '}
+              <span className="relative inline-block whitespace-nowrap text-brand-600">
+                la limpieza
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="absolute -top-3 -right-5 h-5 w-5 text-accent-500 animate-destello"
+                >
+                  <path fill="currentColor" d="M12 0c.6 7.2 4.8 11.4 12 12-7.2.6-11.4 4.8-12 12-.6-7.2-4.8-11.4-12-12C7.2 11.4 11.4 7.2 12 0z" />
+                </svg>
+              </span>
             </h1>
 
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
-              Líderes en productos de limpieza y desinfección en la Zona Norte del país. Calidad certificada y respaldo garantizado.
+            <p className="pointer-events-auto mt-4 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg animate-fade-in-up animation-delay-200">
+              Líderes en productos de limpieza y desinfección en la Zona Norte del país. Calidad certificada y
+              respaldo garantizado.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up animation-delay-300">
-              <a
-                href="/catalogo"
-                className="inline-flex items-center justify-center bg-[#2E5C9A] text-white px-8 py-4 rounded-md font-medium hover:bg-[#234570] transition-all shadow-md hover:shadow-lg"
-              >
+            <div className="pointer-events-auto mt-7 flex flex-col gap-3 sm:flex-row animate-fade-in-up animation-delay-300">
+              <Button to="/catalogo" size="md">
                 Explorar catálogo
-              </a>
-              <a
-                href="#nosotros"
-                className="inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md font-medium hover:border-[#2E5C9A] hover:text-[#2E5C9A] transition-all"
+                <ArrowRight size={18} aria-hidden="true" />
+              </Button>
+              <Button
+                href={whatsappUrl('Hola, quiero cotizar productos de limpieza.')}
+                variant="outline"
+                size="md"
+                className="bg-white/80 backdrop-blur"
               >
-                Conocer más
-              </a>
+                <MessageCircle size={18} className="text-whatsapp" aria-hidden="true" />
+                Cotizar por WhatsApp
+              </Button>
             </div>
           </div>
 
-          <div className="hidden lg:block">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-100 opacity-0 animate-scale-in animation-delay-100 hover:scale-105 hover:shadow-2xl transition-all cursor-default overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <div className="relative flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Users className="text-white" size={24} />
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-[#2E5C9A] mb-1">+{counts.clients.toLocaleString()}</div>
-                      <div className="text-gray-600 font-medium">Clientes satisfechos</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-100 opacity-0 animate-scale-in animation-delay-300 hover:scale-105 hover:shadow-2xl transition-all cursor-default overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <div className="relative flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Package className="text-white" size={24} />
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-[#2E5C9A] mb-1">+{counts.products}</div>
-                      <div className="text-gray-600 font-medium">Productos disponibles</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-2 mt-8">
-                <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-100 opacity-0 animate-scale-in animation-delay-200 hover:scale-105 hover:shadow-2xl transition-all cursor-default overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <div className="relative flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Calendar className="text-white" size={24} />
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-[#51B848] mb-1">+{counts.years}</div>
-                      <div className="text-gray-600 font-medium">Años de experiencia</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="group relative bg-[#2E5C9A]/90 backdrop-blur-sm p-8 rounded-xl shadow-lg text-white opacity-0 animate-scale-in animation-delay-400 hover:scale-105 hover:shadow-2xl transition-all cursor-default overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <div className="relative flex items-center gap-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Award className="text-white" size={24} />
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold mb-1">{counts.certified}%</div>
-                      <div className="font-medium">Certificados MinSalud</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="pointer-events-auto lg:col-span-6 animate-fade-in-up animation-delay-200">
+            <Estanteria />
           </div>
         </div>
 
-        <div className="lg:hidden grid grid-cols-2 gap-4 mt-12">
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-lg flex items-center justify-center">
-                <Users className="text-white" size={18} />
-              </div>
-              <div className="text-3xl font-bold text-[#2E5C9A]">+{counts.clients.toLocaleString()}</div>
-              <div className="text-gray-600 text-sm">Clientes</div>
+        <dl className="pointer-events-auto mt-10 grid grid-cols-2 gap-4 border-t border-brand-200/70 pt-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-brand-200/70 animate-fade-in-up animation-delay-500">
+          {cifras.map((c) => (
+            <div key={c.label} className="flex flex-col-reverse gap-0.5 md:px-6 md:first:pl-0 md:last:pr-0">
+              <dt className="text-sm text-slate-500">{c.label}</dt>
+              <dd className="font-display text-2xl font-bold text-brand-700">{c.valor}</dd>
             </div>
-          </div>
+          ))}
+        </dl>
+      </Container>
 
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#51B848] to-[#3d8f38] rounded-lg flex items-center justify-center">
-                <Calendar className="text-white" size={18} />
-              </div>
-              <div className="text-3xl font-bold text-[#51B848]">+{counts.years}</div>
-              <div className="text-gray-600 text-sm">Años</div>
-            </div>
-          </div>
-
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#2E5C9A] to-[#1e4070] rounded-lg flex items-center justify-center">
-                <Package className="text-white" size={18} />
-              </div>
-              <div className="text-3xl font-bold text-[#2E5C9A]">+{counts.products}</div>
-              <div className="text-gray-600 text-sm">Productos</div>
-            </div>
-          </div>
-
-          <div className="bg-[#2E5C9A]/90 backdrop-blur-sm p-6 rounded-xl shadow-md text-white text-center">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <Award className="text-white" size={18} />
-              </div>
-              <div className="text-3xl font-bold">{counts.certified}%</div>
-              <div className="text-sm">Certificados</div>
-            </div>
-          </div>
-        </div>
+      {/* Ola de agua en el borde inferior: dos capas blancas que se desplazan a distinta velocidad. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-14 sm:h-20">
+        <svg
+          className="absolute bottom-0 left-0 h-full w-[200%] opacity-60 animate-ola [animation-duration:30s]"
+          viewBox="0 0 2880 120"
+          preserveAspectRatio="none"
+        >
+          <path d={OLA} fill="white" transform="translate(360 0)" />
+        </svg>
+        <svg className="absolute bottom-0 left-0 h-full w-[200%] animate-ola" viewBox="0 0 2880 120" preserveAspectRatio="none">
+          <path d={OLA} fill="white" />
+        </svg>
       </div>
     </section>
   );

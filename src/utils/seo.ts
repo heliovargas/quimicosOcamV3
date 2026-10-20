@@ -32,6 +32,7 @@ export function addProductSchema(product: {
   nombre: string;
   descripcionCorta: string;
   imageUrl: string;
+  galeria?: string[];
   id: string;
   categorias: string[];
 }) {
@@ -45,7 +46,7 @@ export function addProductSchema(product: {
     "@type": "Product",
     "name": product.nombre,
     "description": product.descripcionCorta,
-    "image": product.imageUrl,
+    "image": [product.imageUrl, ...(product.galeria ?? [])],
     "url": `https://quimicosocam.com/productos/${product.id}`,
     "brand": {
       "@type": "Brand",

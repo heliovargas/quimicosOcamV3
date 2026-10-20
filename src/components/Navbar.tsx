@@ -1,143 +1,127 @@
-import { Menu, X, ChevronRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Menu, MessageCircle, Phone, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { empresa, whatsappUrl } from '../data/empresa';
+import { cn } from '../utils/cn';
+import { Button } from './ui';
 
+const enlaces = [
+  { label: 'Catálogo', to: '/catalogo' },
+  { label: 'Nosotros', to: '/#nosotros' },
+  { label: 'Servicios', to: '/#servicios' },
+  { label: 'Cobertura', to: '/#cobertura' },
+  { label: 'Contacto', to: '/#contacto' },
+];
+
+/** Navbar flotante tipo píldora. Translúcida arriba del todo, blanca con sombra al hacer scroll. */
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [abierto, setAbierto] = useState(false);
+  const [conScroll, setConScroll] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setConScroll(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+  // Al cambiar de ruta: cierra el menú móvil y resuelve los anchors (/#nosotros) desde cualquier página.
+  useEffect(() => {
+    setAbierto(false);
+    if (location.hash) {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    setIsOpen(false);
-  };
+  }, [location]);
+
+  const esActivo = (to: string) => to === location.pathname;
 
   return (
-    <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-gray-200/50'
-          : 'bg-white/60 backdrop-blur-md'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className={`flex justify-between items-center transition-all duration-300 ${
-          scrolled ? 'h-20' : 'h-24'
-        }`}>
-          <Link
-            to="/"
-            className="relative group flex items-center"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#2E5C9A]/10 to-[#51B848]/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <img
-              src="/ocam.png"
-              alt="Químicos OCAM - Productos de Limpieza"
-              className={`relative transition-all duration-300 ${
-                scrolled ? 'h-16' : 'h-20'
-              } w-auto group-hover:scale-105`}
-            />
-          </Link>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:px-6 sm:pt-4">
+      <nav
+        aria-label="Principal"
+        className={cn(
+          'mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-full pr-2 pl-4 ring-1 backdrop-blur-xl transition-[background-color,box-shadow] duration-300',
+          conScroll || abierto ? 'bg-white/90 shadow-card ring-slate-200/80' : 'bg-white/60 ring-white/60'
+        )}
+      >
+        <Link to="/" className="flex shrink-0 items-center" aria-label="Químicos OCAM, inicio">
+          <img src="/ocam.png" alt="Químicos OCAM" className="h-9 w-auto" />
+        </Link>
 
-          <div className="hidden md:flex items-center space-x-2">
-            <Link
-              to="/"
-              className="relative group px-4 py-2"
-            >
-              <span className={`relative z-10 text-sm font-semibold uppercase tracking-wider transition-colors ${
-                isActive('/') ? 'text-[#2E5C9A]' : 'text-gray-700 group-hover:text-[#2E5C9A]'
-              }`}>
-                Inicio
-              </span>
-              <div className={`absolute inset-0 bg-gradient-to-r from-[#2E5C9A]/5 to-[#51B848]/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ${
-                isActive('/') ? 'scale-100' : ''
-              }`}></div>
-              {isActive('/') && (
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
-              )}
-            </Link>
+        <ul className="hidden items-center gap-0.5 md:flex">
+          {enlaces.map((e) => (
+            <li key={e.to}>
+              <Link
+                to={e.to}
+                className={cn(
+                  'rounded-full px-3.5 py-2 text-sm font-medium transition-colors',
+                  esActivo(e.to)
+                    ? 'bg-brand-50 text-brand-700'
+                    : 'text-slate-700 hover:bg-slate-100 hover:text-brand-700'
+                )}
+              >
+                {e.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-            <Link
-              to="/catalogo"
-              className="relative group ml-4"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2E5C9A] to-[#51B848] rounded-xl blur-md opacity-60 group-hover:opacity-100 transition-opacity"></div>
-              <div className={`relative flex items-center gap-1 px-6 py-3 rounded-xl font-semibold text-sm uppercase tracking-wider transition-all ${
-                isActive('/catalogo')
-                  ? 'bg-gradient-to-r from-[#1e4070] to-[#2E5C9A] text-white'
-                  : 'bg-gradient-to-r from-[#2E5C9A] to-[#51B848] text-white group-hover:shadow-lg'
-              }`}>
-                Catálogo
-                <ChevronRight
-                  size={16}
-                  className="transform group-hover:translate-x-1 transition-transform"
-                />
-              </div>
-            </Link>
-          </div>
+        <div className="hidden items-center gap-1.5 md:flex">
+          <Button href={empresa.telefonoHref} variant="ghost" size="sm" className="hidden rounded-full lg:inline-flex">
+            <Phone size={16} aria-hidden="true" />
+            {empresa.telefono}
+          </Button>
+          <Button href={whatsappUrl()} variant="whatsapp" size="sm" className="rounded-full">
+            <MessageCircle size={16} aria-hidden="true" />
+            WhatsApp
+          </Button>
+        </div>
 
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="relative group p-2"
-            >
-              <div className="absolute inset-0 bg-[#2E5C9A]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative text-gray-700 group-hover:text-[#2E5C9A] transition-colors">
-                {isOpen ? <X size={28} /> : <Menu size={28} />}
-              </div>
-            </button>
+        <button
+          type="button"
+          onClick={() => setAbierto((v) => !v)}
+          className="rounded-full p-2.5 text-slate-700 transition-colors hover:bg-slate-100 md:hidden"
+          aria-expanded={abierto}
+          aria-controls="menu-movil"
+          aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
+        >
+          {abierto ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+        </button>
+      </nav>
+
+      {abierto && (
+        <div
+          id="menu-movil"
+          className="mx-auto mt-2 max-w-6xl rounded-panel bg-white p-3 shadow-card-hover ring-1 ring-slate-200 md:hidden"
+        >
+          <ul className="flex flex-col">
+            {enlaces.map((e) => (
+              <li key={e.to}>
+                <Link
+                  to={e.to}
+                  className={cn(
+                    'block rounded-ui px-3 py-3 text-base font-medium transition-colors hover:bg-slate-100 hover:text-brand-700',
+                    esActivo(e.to) ? 'text-brand-700' : 'text-slate-700'
+                  )}
+                >
+                  {e.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-2 flex flex-col gap-2 border-t border-slate-200 pt-3">
+            <Button href={whatsappUrl()} variant="whatsapp" className="w-full">
+              <MessageCircle size={18} aria-hidden="true" />
+              Escribinos por WhatsApp
+            </Button>
+            <Button href={empresa.telefonoHref} variant="outline" className="w-full">
+              <Phone size={18} aria-hidden="true" />
+              {empresa.telefono}
+            </Button>
           </div>
         </div>
-      </div>
-
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-        isOpen ? 'max-h-screen' : 'max-h-0'
-      }`}>
-        <div className="bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
-          <div className="px-4 py-4 space-y-3">
-            <Link
-              to="/"
-              className={`group flex items-center justify-between px-4 py-3 rounded-xl transition-all ${
-                isActive('/')
-                  ? 'bg-gradient-to-r from-[#2E5C9A]/10 to-[#51B848]/10 text-[#2E5C9A]'
-                  : 'text-gray-700 hover:bg-gray-50'
-              }`}
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="font-semibold">Inicio</span>
-              <ChevronRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/catalogo"
-              className="relative group overflow-hidden rounded-xl"
-              onClick={() => setIsOpen(false)}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2E5C9A] to-[#51B848]"></div>
-              <div className="relative flex items-center justify-between px-4 py-3 text-white font-semibold">
-                <span>Catálogo</span>
-                <ChevronRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 }

@@ -1,112 +1,116 @@
-import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { categorias } from '../types/Product';
-import type { Product } from '../types/Product';
 import productosData from '../data/productos.json';
-import ProductModal from './ProductModal';
+import { categorias, type Product } from '../types/Product';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { cn } from '../utils/cn';
+import { r2Image, r2Srcset } from '../utils/r2';
+import { Button, Section } from './ui';
+
+const productos = productosData as Product[];
+type Categoria = Product['categorias'][number];
+
+/** Tres productos de muestra por línea, en abanico. Ids de productos.json con foto de fondo transparente. */
+const MUESTRA: Record<Categoria, string[]> = {
+  domestico: ['detergente-liquido-ropa', 'multiplex-domestico', 'desinfectante-ocam'],
+  lecherias: ['yodosell-barrera', 'superclor-12', 'carbocam'],
+  automotriz: ['shampoo-car-concentrado', 'brillim-shampoo-car-cera', 'brilim-coolant'],
+  piscinas: ['alcalifor', 'superclor-granulado', 'clarit-plus'],
+};
+
+const lineas = categorias
+  .map((c) => ({
+    id: c.id,
+    nombre: c.nombre,
+    total: productos.filter((p) => p.categorias.includes(c.id)).length,
+    muestra: MUESTRA[c.id].map((id) => productos.find((p) => p.id === id)).filter((p): p is Product => p !== undefined),
+  }))
+  .sort((a, b) => b.total - a.total);
+
+/** Posición de cada foto del abanico: izquierda, centro (al frente) y derecha. */
+const ABANICO = [
+  'left-[14%] bottom-1 h-24 -rotate-12 sm:h-28 group-hover:-translate-x-2 group-hover:-rotate-[16deg]',
+  'left-1/2 bottom-0 z-10 h-28 -translate-x-1/2 sm:h-32 group-hover:-translate-y-1.5',
+  'right-[14%] bottom-1 h-24 rotate-12 sm:h-28 group-hover:translate-x-2 group-hover:rotate-[16deg]',
+];
+
+const entrada = (visible: boolean, i = 0) => ({
+  className: cn('transition-all duration-700 ease-out', visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'),
+  style: { transitionDelay: `${i * 110}ms` },
+});
 
 export default function ProductPreview() {
-  const productos = productosData as Product[];
-
-  const featuredProductIds = [
-    'superclor-granulado-70',
-    'carbocam',
-    'brillim-shampoo-car-cera',
-    'abrillantador-pisos-mosaico'
-  ];
-
-  const featuredProducts = featuredProductIds
-    .map(id => productos.find(p => p.id === id))
-    .filter((p): p is Product => p !== undefined);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const productsAnim = useScrollAnimation();
+  const anim = useScrollAnimation();
 
   return (
-    <section className="relative py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-        <div className="absolute top-1/3 right-0 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-[#2E5C9A] tracking-wider uppercase">Productos Destacados</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Nuestros <span className="text-[#2E5C9A]">Productos</span>
+    <Section id="productos">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-2xl">
+          <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-accent-700">
+            <span aria-hidden="true" className="h-px w-8 bg-accent-500" />
+            Productos destacados
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Nuestros <span className="text-brand-600">Productos</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <span aria-hidden="true" className="mt-5 block h-1 w-16 rounded-full bg-linear-to-r from-brand-600 to-accent-500" />
+          <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
             Descubre nuestra amplia gama de productos certificados para diferentes sectores
           </p>
         </div>
-
-        {featuredProducts.length > 0 ? (
-          <>
-            <div ref={productsAnim.ref} className={`grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-10 sm:mb-16 transition-all duration-700 ${productsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              {featuredProducts.map((product, index) => (
-                <div
-                  key={product.id}
-                  onClick={() => setSelectedProduct(product)}
-                  className="bg-white rounded-lg sm:rounded-xl overflow-hidden hover:shadow-lg transition-all border border-gray-200 group cursor-pointer"
-                >
-                  <div className="aspect-square bg-gray-100 overflow-hidden">
-                    <img
-                      src={product.imageUrl}
-                      alt={`${product.nombre} - ${product.descripcionCorta}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-3 sm:p-6">
-                    <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
-                      {product.categorias.slice(0, 2).map(cat => (
-                        <span key={cat} className="text-[7px] sm:text-[8px] font-semibold text-[#2E5C9A] bg-blue-50 px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wide">
-                          {categorias.find(c => c.id === cat)?.nombre}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="text-xs sm:text-base lg:text-lg font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-[#2E5C9A] transition-colors line-clamp-2">
-                      {product.nombre}
-                    </h3>
-                    <p className="text-gray-600 text-[10px] sm:text-sm leading-relaxed line-clamp-2 hidden sm:block">
-                      {product.descripcionCorta}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Link
-                to="/catalogo"
-                className="group relative inline-flex items-center justify-center overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#2E5C9A] to-[#51B848] rounded-xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative flex items-center gap-2 bg-gradient-to-r from-[#2E5C9A] to-[#51B848] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg group-hover:shadow-2xl transition-all">
-                  Ver catálogo completo
-                  <ArrowRight size={20} className="transform group-hover:translate-x-2 transition-transform" />
-                </div>
-              </Link>
-            </div>
-          </>
-        ) : (
-          <div className="text-center py-12 bg-gray-50 rounded-xl">
-            <p className="text-gray-600 text-lg">
-              Próximamente encontrarás aquí nuestros productos destacados
-            </p>
-          </div>
-        )}
+        <Button to="/catalogo" className="shrink-0">
+          Ver catálogo completo
+          <ArrowRight size={18} aria-hidden="true" />
+        </Button>
       </div>
 
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
-    </section>
+      {/* Una tarjeta por línea de producto, con tres fotos reales en abanico. */}
+      <div ref={anim.ref} className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
+        {lineas.map((linea, i) => {
+          const a = entrada(anim.isVisible, i);
+          return (
+            <Link
+              key={linea.id}
+              to={`/catalogo?categoria=${linea.id}`}
+              className={cn(
+                'group relative overflow-hidden rounded-panel bg-linear-to-b from-brand-50/70 to-white p-4 shadow-card ring-1 ring-slate-200/80 hover:-translate-y-1 hover:shadow-card-hover sm:p-5',
+                a.className
+              )}
+              style={a.style}
+            >
+              <div className="relative h-32 sm:h-36">
+                {linea.muestra.map((p, k) => (
+                  <img
+                    key={p.id}
+                    src={r2Image(p.imageUrl, { width: 256 })}
+                    srcSet={r2Srcset(p.imageUrl, [160, 256, 384])}
+                    sizes="128px"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className={cn(
+                      'absolute w-auto object-contain drop-shadow-[0_10px_8px_rgba(15,23,42,0.22)] transition-transform duration-500',
+                      ABANICO[k]
+                    )}
+                  />
+                ))}
+              </div>
+
+              <div className="mt-4 flex items-end justify-between gap-2">
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-slate-900 sm:text-xl">{linea.nombre}</h3>
+                  <p className="mt-0.5 text-sm text-slate-500">
+                    {linea.total} {linea.total === 1 ? 'producto' : 'productos'}
+                  </p>
+                </div>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-brand-700 ring-1 ring-brand-100 transition-colors group-hover:bg-brand-600 group-hover:text-white">
+                  <ArrowRight size={16} aria-hidden="true" />
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </Section>
   );
 }

@@ -5,7 +5,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto especializado para resaltar el brillo natural en pisos de mosaico, terrazo y terrazín.",
     "descripcionLarga": "El abrillantador de pisos es un producto para resaltar el brillo natural y para restablecer el brillo perdido por el tiempo y el uso continuo en sus pisos lujados, de mosaico o terrazo. Posee resinas sintéticas que protegen contra derrames de líquidos y restablecen el brillo perdido, solo con aplicar en forma abundante, sin necesidad de frotar. Además deja un agradable aroma donde sea aplicado.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738130/ocam/productos/hogar/abrillantador-pisos-mosaico_c4dtkv.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/abrillantador-pisos-mosaico.webp",
     "presentaciones": ["3.785 litros", "1.800 litros", "1 litro"],
     "usos": ["Pisos de mosaico, terrazo o terrazín", "Pisos lujados con cemento o con ocre rojo, verde y cualquier color"]
   },
@@ -15,7 +15,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Formulado con resinas de silicón para dar brillo y protección a cuero, vinil, hule y plástico.",
     "descripcionLarga": "El abrillantador de superficies OCAM ha sido formulado con resinas de silicón y componentes especializados para dar brillo y protección a artículos de cuero, vinil, hule y plástico entre otros. Aplíquese en muebles, escritorios, áreas internas de automóviles y todo tipo de artículos que quiera abrillantar.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Abrillantador-Embellecedor-Protector-768x768.png"
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/abrillantador-superficies.webp"
   },
   {
     "id": "abrillantin",
@@ -23,7 +23,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Producto especializado para la limpieza, protección y embellecimiento de las llantas del automóvil.",
     "descripcionLarga": "Abrillantin es un producto especializado para la limpieza, protección y embellecimiento de las llantas del automóvil. Posee agentes que dan brillo permanente a cualquier tipo de llanta, sin importar si es nueva o usada. Crea en las llantas una capa protectora, la cual no es removida con la lluvia, ni con las salpicaduras de agua. Además impide se adhiera el polvo, manteniendo así el brillo constante y protección deseada.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Abrillantin.png"
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/abrillantin.webp"
   },
   {
     "id": "acido-muriatico",
@@ -31,7 +31,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto de carácter ácido fuerte para eliminar ceras y ocre en pisos lujados, previo a la instalación de un piso cerámico.",
     "descripcionLarga": "Es un producto de carácter ácido fuerte para eliminar ceras y ocre en pisos lujados, previo a la instalación de un piso cerámico. También elimina lana y musgos en paredes de cemento o ladrillo y puede ser usado para eliminar óxidos en superficies metálicas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Acido-Muriatico.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/acido-muriatico.webp",
     "presentaciones": ["3.875 litros", "1 litro"],
     "usos": ["Preparación de superficies previas a la colocación de cerámica o azulejos", "Limpieza de aceras", "Remoción de herrumbre en objetos metálicos"]
   },
@@ -41,16 +41,19 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Producto para la limpieza y renovación de superficies de aluminio. Remueve suciedad inorgánica y orgánica.",
     "descripcionLarga": "El Alumigon es un producto para la limpieza y renovación de superficies de aluminio. Remueve la suciedad inorgánica (óxido de aluminio, silicatos y carbonatos), y también la suciedad orgánica (grasa animal y vegetal). Limpia el aluminio, tráiler, marcos, aros, paneles (aire acondicionado), motores de combustión y muchos más. Este es un limpiador concentrado de tipo ácido, que deja un excelente acabado.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Alumigon.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/alumigon.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/automotriz/alumigon-2.webp"
+    ],
     "presentaciones": ["3.785 litros", "1000 ml con dispensador"]
   },
   {
     "id": "brillim-shampoo-car-cera",
-    "nombre": "Brillim Shampoo Car con Cera",
+    "nombre": "Brilim Shampoo Car con Cera",
     "categorias": ["automotriz"],
     "descripcionCorta": "Shampoo para carros formulado con bases silicónicas que resaltan el brillo de la pintura.",
-    "descripcionLarga": "El shampoo para carros 'Brillim con cera' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562341/ocam/productos/automotriz/brilim-shampo-con-cera_adskry.png",
+    "descripcionLarga": "El shampoo para carros 'Brilim con cera' está formulado con excelentes bases silicónicas que resaltan el brillo de la pintura de los carros. Elimina con el lavado, la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio, protegiendo la pintura.",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/brillim-shampoo-car-cera.webp",
     "usos": ["Lavado de automóviles, buses, camiones y motos", "Lavado de partes metálicas, plásticas o de hule"]
   },
   {
@@ -59,7 +62,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Formulada con resinas antideslizantes y sintéticas para sellar, proteger y dar brillo a pisos.",
     "descripcionLarga": "Brillosa ha sido formulada con resinas antideslizantes y sintéticas especiales para sellar los micro-poros de los pisos, proteger la superficie y dar brillo cuando se frota. Se ofrece en dos tipos: Brillosa roja y Brillosa blanca, según sea su necesidad.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738978/ocam/productos/hogar/cera-liquida-pisos-roja_idvth1.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/brillosa-cera-pisos-roja.webp",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": ["Pisos de vinil, loseta, terrazo, mosaico", "Pisos de cerámica, mármol"]
   },
@@ -69,7 +72,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Formulada con resinas antideslizantes y sintéticas para sellar, proteger y dar brillo a pisos.",
     "descripcionLarga": "Brillosa ha sido formulada con resinas antideslizantes y sintéticas especiales para sellar los micro-poros de los pisos, proteger la superficie y dar brillo cuando se frota. Se ofrece en dos tipos: Brillosa roja y Brillosa blanca, según sea su necesidad.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767738975/ocam/productos/hogar/cera-liquida-pisos-blanca_dg54rn.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/brillosa-cera-pisos-blanca.webp",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": ["Pisos de vinil, loseta, terrazo, mosaico", "Pisos de cerámica, mármol"]
   },
@@ -79,7 +82,11 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Desinfectante industrial para limpieza aséptica en casos difíciles con acción repelente de insectos.",
     "descripcionLarga": "Carbocam es un desinfectante industrial, especialmente formulado para la limpieza aséptica de casos difíciles, donde un desinfectante común no funciona, como en porquerizas, cloacas, tanques sépticos, parideras, corrales, perreras, etc. Además posee acción repelente contra algunos insectos. Combate bacterias, hongos, protozoos, algas y otros. Deja un agradable y duradero aroma.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Carbocan.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/carbocam.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/lecherias/carbocam-2.webp",
+      "https://media.quimicosocam.com/productos/lecherias/carbocam-3.webp"
+    ],
     "presentaciones": ["3.785 litros", "1 litro", "500 ml", "250 ml"],
     "usos": ["Desinfección de granjas, corrales, porquerizas", "Desinfección de lecherías"]
   },
@@ -89,7 +96,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor 12% es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590283/ocam/productos/lecherias/superclor-12_qaij8b.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/superclor-12.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Implementos de lechería y tanques de enfriamiento", "Potabilización del agua", "Desinfección de superficies y pisos"]
   },
@@ -99,7 +106,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767589938/ocam/productos/lecherias/superclor-6_ija3pq.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/superclor-6.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Implementos de lechería y tanques de enfriamiento", "Potabilización del agua", "Desinfección de superficies y pisos"]
   },
@@ -109,7 +116,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto altamente concentrado en hipoclorito de calcio para eliminar bacterias, hongos y algas.",
     "descripcionLarga": "Superclor granulado es un producto altamente concentrado en hipoclorito de calcio, ingrediente capaz de eliminar cualquier tipo de bacteria, hongo o alga presente en cualquier superficie, líquido o sustancia viscosa. En el tratamiento de aguas de piscina, se usa para el mantenimiento diario, en la dosis recomendada por nuestros asesores.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562556/ocam/productos/piscinas/superclor-cloro-granulado-70_f5rq7u.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/piscinas/superclor-granulado.webp",
     "presentaciones": ["1 galón", "800 g", "500 g"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Desinfección de instalaciones agro veterinarias e industriales", "Limpieza de aceras con musgo o algas", "Potabilización del agua de piscinas"]
   },
@@ -119,7 +126,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto necesario para mantenimiento y tratamiento de choque en agua de piscinas.",
     "descripcionLarga": "Superclor granulado 91%, es el producto necesario para el mantenimiento y tratamiento de choque en el agua de su piscina. Su alta concentración de ácido tricloro, elimina cualquier tipo de bacteria, hongo o alga presente en el agua.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563535/ocam/productos/piscinas/superclor-cloro-granulado-91_yzxd1w.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/piscinas/superclor-granulado-91.webp",
     "presentaciones": ["1 galón", "800 g", "500 g"],
     "usos": ["Limpieza y desinfección de equipos de ordeño", "Desinfección de instalaciones agro veterinarias e industriales", "Limpieza de aceras con musgo o algas", "Potabilización del agua de piscinas"]
   },
@@ -129,7 +136,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Ajustador en polvo para elevar el pH del agua de su piscina al rango óptimo.",
     "descripcionLarga": "Alcalifor es un producto en polvo que se diluye fácilmente en el agua de su piscina, elevando el pH cuando esté por debajo del rango normal (7.4 a 7.6). Mediante el uso de un clorímetro determine el nivel de pH en una muestra del agua de su piscina. Agregue 200 gramos de Alcalifor por cada 10 m³ de agua contenida en su piscina, con lo cual logrará elevar el pH en 1, si quiere elevar el pH en 2 o más agregue más cantidad según sea necesario. Verifique el pH después de cada aplicación para mantener el nivel deseado.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563042/ocam/productos/piscinas/alcalifor_gedtyk.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/piscinas/alcalifor.webp",
     "presentaciones": ["20 kg", "10 kg", "4 kg"],
     "usos": ["Ajuste y control del pH en piscinas", "Mantenimiento del rango óptimo de pH en agua de piscina", "Aplicación semanal para mantener el pH en el rango correcto"]
   },
@@ -139,7 +146,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Producto especializado para el tratamiento y prevención de algas en aguas de piscina.",
     "descripcionLarga": "Alguicida 80% es un producto altamente efectivo para el tratamiento de aguas de piscina. Su fórmula concentrada previene y elimina la aparición de algas en el agua de su piscina, manteniéndola cristalina y libre de verdín. Se aplica de manera semanal según el tamaño de su piscina para un mejor resultado. Recomendado aplicar directamente al agua de la piscina o disolverlo previamente en un balde con agua para facilitar su aplicación y distribución uniforme.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563046/ocam/productos/piscinas/alguicida-80_xxekbe.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/piscinas/alguicida-80.webp",
     "presentaciones": ["1 galón"],
     "usos": ["Prevención y eliminación de algas en piscinas", "Mantenimiento semanal del agua cristalina", "Tratamiento preventivo contra verdín y algas verdes"]
   },
@@ -149,7 +156,7 @@
     "categorias": ["piscinas"],
     "descripcionCorta": "Clarificador floculante para obtener agua cristalina en su piscina de forma rápida y efectiva.",
     "descripcionLarga": "Clarit Plus de Spin Piscinas es un clarificador floculante especialmente formulado para el tratamiento de aguas de piscina. Este producto agrupa las partículas pequeñas suspendidas en el agua, facilitando su filtración y eliminación. Ideal para cuando el agua de su piscina se ve turbia o lechosa. Ayuda a mantener el agua cristalina y brillante, mejorando la eficiencia del sistema de filtración. Se recomienda aplicar después del tratamiento con cloro para obtener resultados óptimos.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767563504/ocam/productos/piscinas/spin-claritplus_sxpwq6.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/piscinas/clarit-plus.webp",
     "presentaciones": ["1 L"],
     "usos": ["Clarificación de agua turbia en piscinas", "Mejora la eficiencia del sistema de filtración", "Eliminación de partículas suspendidas", "Mantenimiento de agua cristalina"]
   },
@@ -159,7 +166,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Todo lo que necesitas en papelería de limpieza, dispensadores e insumos para aplicar nuestros productos.",
     "descripcionLarga": "Tenemos todo lo que usted necesita en la línea de papelería de limpieza, dispensadores, insumos necesarios para aplicar o usar nuestros productos en su empresa u hogar.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Accesorios-Varios.png",
+    "imageUrl": "/producto-sin-foto.webp",
     "presentaciones": [
       "Bolsas para basura Vikingo (pequeña, mediana, grande y de jardín)",
       "Mechas para piso (tamaño normal e industrial)",
@@ -183,7 +190,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Elimina completamente los malos olores con composición química que elimina bacterias, no solo perfuma.",
     "descripcionLarga": "El controlador de malos olores elimina completamente los malos olores, dada su composición química que elimina las bacterias (NO las perfuma). Posee ingredientes desinfectantes que al contacto con los agentes productores de malos olores los mata e impide su reproducción, dejando a la vez un aroma agradable.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Controlador-Malos-Olores-Casos-Dificiles.png",
+    "imageUrl": "/producto-sin-foto.webp",
     "presentaciones": ["3.785 litros", "1.850 litros", "1 litro"],
     "usos": [
       "Lugares donde han quedado residuos de excrementos u orina de animales (perreras, porquerizas, lecherías)",
@@ -198,7 +205,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Formulación balanceada de agentes detergentes alcalinos con emolientes que suavizan la piel.",
     "descripcionLarga": "La crema lavaplatos es un producto de una formulación balanceada de agentes detergentes de carácter alcalino, que al contacto con el agua genera gran cantidad de espumas que envuelven las moléculas de grasa presentes en los utensilios de cocina, para luego ser arrastradas por el agua, dejando así, los utensilios libres de cualquier suciedad. Posee agentes emolientes que suavizan la piel de las manos, evitando así la resequedad de las mismas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767721467/ocam/productos/hogar/crema-lavaplatos-horax_owpq3p.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/crema-lavaplatos.webp",
     "presentaciones": ["1000 gramos"],
     "usos": [
       "Lavado de utensilios de cocina, platos, tasas, ollas",
@@ -212,7 +219,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto químico de alta potencia para desatascar tuberías y desagües obstruidos de manera rápida y efectiva.",
     "descripcionLarga": "Desatorador OCAM es un producto químico especializado formulado con ingredientes de alta potencia para desatascar y desobstruir tuberías, desagües, lavamanos y fregaderos. Su fórmula concentrada disuelve eficazmente acumulaciones de cabello, grasa, residuos de jabón y materia orgánica que causan obstrucciones en las tuberías. Actúa rápidamente penetrando y desintegrando los bloqueos más difíciles, restaurando el flujo normal del agua en cañerías y sifones.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767722540/ocam/productos/hogar/desatorador_baculb.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/desatorador.webp",
     "presentaciones": ["1 litro"],
     "usos": [
       "Desobstrucción de tuberías de lavamanos, fregaderos y lavaplatos",
@@ -227,7 +234,10 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante limpiador concentrado de uso industrial y doméstico que elimina bacterias y da brillo.",
     "descripcionLarga": "Poderoso es un desinfectante limpiador de uso industrial y doméstico. Elimina bacterias, deja un agradable aroma y da brillo a sus pisos. Es un producto concentrado, por lo cual puede diluirse en 3 partes de agua.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Desinfectante-Limpiador-Poderoso.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/desinfectante-ocam-floral.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/hogar/desinfectante-ocam-lavanda.webp"
+    ],
     "presentaciones": [
       "3.785 litros - Aroma limón",
       "3.785 litros - Aroma cítricos",
@@ -253,7 +263,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Formulado con mezcla balanceada de abrasivos que limpian a fondo sin dañar los tejidos, ideal para prendas finas.",
     "descripcionLarga": "El detergente líquido para ropa está formulado con una mezcla balanceada de abrasivos capaces de quitar la suciedad, sulfactantes y agentes espumosos que limpian a fondo sin dañar los tejidos. Posee gran cantidad de espuma y un agradable aroma que deja la ropa suave, limpia y olorosa. Se recomienda para prendas finas y ropas que se necesita que no pierdan su color.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767722181/ocam/productos/hogar/detergente-liquido_jx4hqg.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/detergente-liquido-ropa.webp",
     "presentaciones": ["3.785 litros", "1800 ml", "1000 ml"],
     "usos": [
       "Lavado de ropa en lavadora y también para el lavado a mano",
@@ -267,7 +277,7 @@
     "categorias": ["domestico", "lecherias"],
     "descripcionCorta": "Detergente industrial desengrasante, espumoso y con abrasivos. Sin olor, ideal para higiene de tanques de leche.",
     "descripcionLarga": "Determill es un detergente industrial desengrasante, espumoso y con abrasivos. Al contacto con el agua produce gran cantidad de espuma y elimina con facilidad la grasa, tierra o cualquier suciedad existente. No posee olor, siendo ideal para higiene de tanques de leche, pezoneras e instrumentos utilizados en la manipulación de alimentos.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767589510/ocam/productos/lecherias/determill_wbi7d4.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/determill-industrial.webp",
     "presentaciones": ["5 kg", "2 kg", "1 kg"],
     "usos": [
       "Lavado de tanques de leche, lavado de moldes para queso, pisos y paredes de industrias alimenticias",
@@ -280,7 +290,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Envases vacíos en diferentes presentaciones para almacenamiento y aplicación de productos químicos.",
     "descripcionLarga": "Tenemos todo lo que usted necesita en envases vacíos para almacenar y aplicar productos de limpieza. Disponibles en diferentes tamaños y formatos según su necesidad.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Envases-Vacios.png",
+    "imageUrl": "/producto-sin-foto.webp",
     "presentaciones": [
       "Litro corrugado con atomizador",
       "Litro rectangular",
@@ -294,7 +304,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Detergente líquido espumoso para uso manual y automático, diseñado para remoción de grasa de leche.",
     "descripcionLarga": "Espuxil es un detergente líquido espumoso para uso manual y automático, diseñado para la remoción de la grasa de leche impregnada en aquellos utensilios empleados en el ordeño: Pezoneras, tarros, baldes y tanques de enfriamiento. Este detergente genera gran cantidad de espuma, no deja olor y no deja residuos en los utensilios lavados. Elimina todo tipo de grasas y suciedades.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590560/ocam/productos/lecherias/espuxil_hzt7wq.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/espuxil-detergente.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Limpieza de tanques de leche",
@@ -308,7 +318,11 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Aceite que satisface los requerimientos más severos de lubricación en bombas de vacío de equipos de ordeño.",
     "descripcionLarga": "El aceite F-68 satisface los requerimientos más severos de lubricación en bombas de vacío, de equipos de ordeño automáticos y semiautomáticos. Formulado con excelentes bases parafínicas de un alto refino, con aditivos anticorrosivos y estabilizadores, alto índice de viscosidad, excelente liberación de aire y estable en servicios prolongados.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Aceite-Bomba-De-Vacio.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/f68-aceite-bomba-vacio.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/lecherias/f68-aceite-bomba-vacio-2.webp",
+      "https://media.quimicosocam.com/productos/lecherias/f68-aceite-bomba-vacio-3.webp"
+    ],
     "presentaciones": ["3.785 litros"],
     "usos": [
       "Protege contra la corrosión y el herrumbre",
@@ -322,7 +336,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Detergente alcalino de espuma controlada para limpieza y desinfección de tuberías de equipos de ordeño.",
     "descripcionLarga": "FM-500 es un detergente alcalino de espuma controlada para la limpieza y desinfección de las tuberías de equipos de ordeño de circuito cerrado automáticos y semiautomáticos. También para el lavado de tanques de leche con sistema automático. FM-500 está formulado con ingredientes que atacan la grasa emulsificándola, agentes dispersantes que impiden que las partículas desprendidas de las tuberías se depositen nuevamente en ellas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767719471/ocam/productos/lecherias/detergente-fm-500_r4bviw.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/fm500-detergente-alcalino.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Lavado de equipo de ordeño",
@@ -336,7 +350,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto de amplio poder desinfectante que combate bacterias, gérmenes, virus, levaduras y hongos.",
     "descripcionLarga": "Formalina es un producto de amplio poder desinfectante, combate bacterias, gérmenes, virus, levaduras, hongos y más. Esencial para la desinfección de superficies de recintos industriales y agrícolas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767590426/ocam/productos/lecherias/formalina_ofxzfc.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/formalina-37.webp",
     "presentaciones": ["3.785 litros", "1 litro", "500 ml"],
     "usos": [
       "Desinfección de galerones, pisos, paredes y demás recintos",
@@ -349,7 +363,12 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Desodorante ambiental con esencias aromáticas que perduran por horas, dando sensación de frescura.",
     "descripcionLarga": "Fragant es un desodorante ambiental, que perfuma los ambientes en donde es aplicado. Posee esencias aromáticas que perduran con un agradable olor en el ambiente, por varias horas, dando así una sensación de frescura. Se encuentran en varios olores para escoger de acuerdo a su preferencia.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Aromas.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/fragancias-ambientales.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/automotriz/fragancias-ambientales-chicle.webp",
+      "https://media.quimicosocam.com/productos/automotriz/fragancias-ambientales-fresa.webp",
+      "https://media.quimicosocam.com/productos/automotriz/fragancias-ambientales-frutas.webp"
+    ],
     "presentaciones": [
       "230 ml - Aroma eucalipto",
       "230 ml - Aroma fresa",
@@ -369,7 +388,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador de vidrios y cristales con propiedad antiempañante que elimina todo tipo de suciedad.",
     "descripcionLarga": "Limpiador de Vidrios OCAM es un limpiador de vidrios y cristales, con propiedad antiempañante, el cual además de eliminar la suciedad de los vidrios, evita que estos se empañen. Los ingredientes especializados remueven grasa o aceite, polvo, tierra, sustancias azucaradas y todo tipo de suciedad presente en los vidrios.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767741444/ocam/productos/hogar/limpiador-vidrios_af69hj.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/glas-limpia-vidrios.webp",
     "presentaciones": ["870 ml"],
     "usos": [
       "Limpia y evita el empañamiento de parabrisas de automóviles",
@@ -383,7 +402,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador concentrado de alto poder para remover suciedad difícil en pisos de cerámica.",
     "descripcionLarga": "El limpiador para pisos de cerámica 'Limpro' por su alto poder es ideal para remover la suciedad presente en los pisos, causada por derrames de bebidas, dulces, comidas, tierra, grasa y otros. Limpro actúa donde un limpiador común no es efectivo dada su concentración de tensoactivos.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Limpio.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/limpro-ceramica.webp",
     "presentaciones": ["1000 ml", "3.785 litros", "1.800 ml"],
     "usos": [
       "Limpro es usado en pisos de cerámica de primera y segunda calidad",
@@ -398,7 +417,11 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Jabón líquido antibacterial de uso industrial y doméstico con componentes yodados que generan gran espuma.",
     "descripcionLarga": "Manu es un producto versátil de uso industrial y doméstico. Posee componentes yodados que le dan carácter antibacterial, genera gran cantidad de espuma eliminando suciedad y bacterias. Se aplica puro, mediante dispensador automático o manual.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Manu.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/manu-jabon-manos-manzana.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/hogar/manu-jabon-manos-tutifruti.webp",
+      "https://media.quimicosocam.com/productos/hogar/manu-jabon-manos-herbal.webp"
+    ],
     "presentaciones": [
       "3.785 litros - Aroma manzana",
       "3.785 litros - Aroma tutti fruti",
@@ -423,7 +446,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador desengrasante por excelencia para casos difíciles donde un limpiador normal no funciona.",
     "descripcionLarga": "Múltiplex es el limpiador desengrasante por excelencia especial para los casos difíciles, donde un limpiador normal no funciona. Múltiplex elimina todo tipo de suciedad y grasa, presente en cualquier tipo de superficie como loza, cristal, madera, cuero, resina, metales, plástico, etc.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Multiplex-Limpiador-Para-Uso-Domestico.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/multiplex-domestico.webp",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": [
       "Aplíquese Múltiplex puro y en forma abundante sobre la superficie a limpiar o desengrasar",
@@ -432,11 +455,11 @@
   },
   {
     "id": "brillim-desengrasante-industrial",
-    "nombre": "Brillim Desengrasante Industrial",
+    "nombre": "Brilim Desengrasante Industrial",
     "categorias": ["automotriz"],
     "descripcionCorta": "Desengrasante industrial de alta potencia para casos difíciles en superficies industriales y automotrices.",
-    "descripcionLarga": "Brillim Desengrasante Industrial es un limpiador desengrasante de alta potencia especial para casos difíciles, donde un limpiador normal no funciona. Elimina todo tipo de suciedad y grasa presente en cualquier tipo de superficie como cuero, resina, metal, plástico, motores y piezas automotrices. Su fórmula concentrada penetra profundamente para remover hasta las grasas más difíciles de manera rápida y efectiva.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767564605/ocam/productos/automotriz/brillim-desengrasante-industrial_jkgmgc.png",
+    "descripcionLarga": "Brilim Desengrasante Industrial es un limpiador desengrasante de alta potencia especial para casos difíciles, donde un limpiador normal no funciona. Elimina todo tipo de suciedad y grasa presente en cualquier tipo de superficie como cuero, resina, metal, plástico, motores y piezas automotrices. Su fórmula concentrada penetra profundamente para remover hasta las grasas más difíciles de manera rápida y efectiva.",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/brillim-desengrasante-industrial.webp",
     "presentaciones": ["3.785 litros", "1.800 ml", "1000 ml"],
     "usos": [
       "Aplíquese puro y en forma abundante sobre la superficie a limpiar o desengrasar",
@@ -450,7 +473,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Limpiador desengrasante con pH neutro ideal para superficies delicadas que requieren limpieza profunda sin dañar.",
     "descripcionLarga": "Múltiplex Neutro es un limpiador desengrasante de pH balanceado especialmente formulado para superficies delicadas que requieren una limpieza profunda sin el riesgo de daño por alcalinidad. Mantiene todas las propiedades de limpieza de la línea Multiplex pero con un pH neutro que lo hace seguro para todo tipo de materiales sensibles, incluyendo aluminio, acero inoxidable y superficies pintadas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767721678/ocam/productos/hogar/multiplex-neutro_xrg0ab.png"
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/multiplex-neutro.webp"
   },
   {
     "id": "pomes-crema-quita-grasa",
@@ -458,7 +481,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Crema quita grasa de uso industrial y mecánico con abrasivos que elimina grasa, tierra y pintura de las manos.",
     "descripcionLarga": "Pomes es una crema quita grasa de uso industrial y mecánico. Contiene abrasivos en pequeños trozos a similitud de arena, los cuales al frotar las manos luego de ser aplicada, ayudan a eliminar la grasa, tierra, pintura y cualquier tipo de suciedad existente. Sus contenidos de solventes y detergentes eliminan la grasa presente en las manos de una forma rápida y sin dañar las mismas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767562155/ocam/productos/automotriz/pomes-crema-quitagrasa_hhuwoi.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/pomes-crema-quita-grasa.webp",
     "presentaciones": ["Pomes 1 galón", "Pomes 1/4 de galón"],
     "usos": [
       "En talleres mecánicos para eliminar la grasa y los aceites del personal y los clientes",
@@ -472,7 +495,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Producto esencial para prevención de obstrucciones en tuberías y eliminación de hongos.",
     "descripcionLarga": "Potasa es el producto esencial para la prevención de obstrucciones en tuberías de desagües y sifones. Elimina las aglomeraciones de grasa y materia orgánica presentes en estos sitios. También es usado como un excelente anti-hongos para cualquier superficie que el agua no dañe.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720788/ocam/productos/hogar/potasa_yongae.png"
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/potasa.webp"
   },
   {
     "id": "shampoo-car-concentrado",
@@ -480,7 +503,7 @@
     "categorias": ["automotriz"],
     "descripcionCorta": "Shampoo concentrado para autos que protege la pintura, abrillanta y aromatiza su automóvil.",
     "descripcionLarga": "Shampoo Car Concentrado está formulado con excelentes bases que protegen la pintura de su automóvil mientras la limpian. Contiene detergentes y aditivos especializados para remover la suciedad producto de grasas y tierra. Genera gran cantidad de espuma que sale fácilmente con el agua, arrastrando a su paso lo sucio y dejando un acabado brillante. Su fórmula concentrada rinde más y deja un agradable aroma en su automóvil.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767564371/ocam/productos/automotriz/shampoocar-concentrado_kmmp7a.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/shampoo-car-concentrado.webp",
     "usos": [
       "Para el lavado de automóviles, buses, camiones, motos y cualquier tipo de carros",
       "Es usado tanto en el lavado de partes metálicas, como plásticas o hule"
@@ -492,7 +515,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto de naturaleza ácida que remueve incrustaciones de piedra de leche e impide su formación.",
     "descripcionLarga": "Shu-Ácido es un producto de naturaleza ácida, usado con regularidad en los equipos de ordeño y plantas procesadoras de leche, remueve las incrustaciones de piedra de leche e impide su formación. Se recomienda su uso diario después del lavado con FM-500 detergente alcalino.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767719348/ocam/productos/lecherias/shu-acido_c9rgxk.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/shu-acido-desincrustador.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para el lavado de equipos de ordeños automáticos y semiautomáticos",
@@ -506,7 +529,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Poderoso desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor 12% es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720733/ocam/productos/hogar/superclor-12-domestico_ezvxke.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/superclor-12-domestico.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para la limpieza y desinfección de equipos de ordeño, implementos de lechería y tanques de enfriamiento de leche",
@@ -521,7 +544,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para instalaciones industriales, hoteles, escuelas y plantas procesadoras.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro capaz de eliminar una amplia gama de microorganismos presentes en instalaciones industriales e institucionales, tales como hoteles, escuelas, y plantas procesadoras de alimentos.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720609/ocam/productos/hogar/superclor-4-domestico_gujgrx.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/superclor-4.webp",
     "presentaciones": ["3.785 litros", "1.800 litros"],
     "usos": [
       "Para la limpieza y desinfección de cualquier tipo de superficie que el agua no dañe",
@@ -534,7 +557,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Desinfectante de amplio espectro para industrias lecheras y plantas procesadoras de alimentos.",
     "descripcionLarga": "Superclor es un poderoso desinfectante de amplio espectro, capaz de eliminar una amplia gama de microorganismos presentes en las industrias lecheras y plantas procesadoras de alimentos. Provee excelentes resultados en la desinfección de equipos de ordeño, tarros, tanques de enfriamiento, pezoneras y tuberías de ordeñadoras mecánicas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767720690/ocam/productos/hogar/superclor-6-domestico_g3ffnq.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/superclor-6-domestico.webp",
     "presentaciones": ["19 litros", "3.785 litros"],
     "usos": [
       "Para la limpieza y desinfección de equipos de ordeño, implementos de lechería y tanques de enfriamiento de leche",
@@ -549,7 +572,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto de amplio poder desinfectante con humectantes y emolientes para proteger la piel de ubres.",
     "descripcionLarga": "Yodosell es un producto de amplio poder desinfectante, combate virus, bacterias, levaduras, hongos y protozoos. Además de desinfectar posee humectantes y emolientes especializados que protegen, sellan y suavizan la piel de la ubre de vacas y cabras. Además en la dilución adecuada puede ser utilizado en la desinfección de recintos pecuarios y agrícolas.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Yodosell.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/yodosell-2-concentrado.webp",
     "presentaciones": ["19 litros", "3.785 litros", "1 litro", "500 ml"],
     "usos": [
       "Para desinfección de recintos industriales como fábricas, empacadoras, escuelas, hoteles, granjas, etc.",
@@ -563,7 +586,7 @@
     "categorias": ["lecherias"],
     "descripcionCorta": "Producto listo para usar que desinfecta pezones y deja una película protectora contra bacterias.",
     "descripcionLarga": "Yodosell barrera es un producto que viene listo para usar, se aplica directamente, en los pezones de vacas y cabras, después de que han sido ordeñadas. Yodosell barrera desinfecta los pezones y deja una película que tapa totalmente los esfínteres, impidiendo la entrada a bacterias y cualquier microorganismo generador de enfermedades de carácter infeccioso.",
-    "imageUrl": "https://quimicosocam-8365d0.ingress-earth.ewp.live/wp-content/uploads/2022/08/Yodosell-Barrera.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/lecherias/yodosell-barrera.webp",
     "presentaciones": ["Cubeta de 20 litros", "3.785 litros", "1 litro", "500 ml"],
     "usos": [
       "Para sellar y desinfectar completamente los pezones de las vacas",
@@ -576,7 +599,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Suavizante para ropa con aroma primavera que deja las prendas suaves, frescas y agradablemente perfumadas.",
     "descripcionLarga": "Suavizante Determil está formulado con ingredientes especializados que suavizan las fibras de la ropa, reducen la electricidad estática y facilitan el planchado. Su delicada fragancia a primavera con notas florales permanece en las prendas por más tiempo, dejando su ropa suave al tacto y con un aroma fresco y agradable. Compatible con todo tipo de telas, tanto en lavado a mano como en lavadora automática o semiautomática.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740259/ocam/productos/hogar/suavizante-determil_acgkf6.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/suavizante-determil.webp",
     "presentaciones": ["1000 ml"],
     "usos": [
       "Suavizado de ropa en lavado a mano o en lavadora",
@@ -591,7 +614,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Suavizante para ropa con intenso aroma floral que cuida las fibras y deja un perfume duradero.",
     "descripcionLarga": "Suavizante OCAM Floral es un producto de alta calidad formulado para cuidar y suavizar las fibras de sus prendas mientras les brinda un intenso y agradable aroma floral. Su fórmula concentrada penetra en las fibras textiles proporcionando suavidad, reduciendo la formación de arrugas y facilitando el proceso de planchado. Ideal para todo tipo de telas, incluyendo toallas, sábanas, ropa de cama y prendas delicadas. Su fragancia floral perdura por varios días, manteniendo su ropa fresca y perfumada.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740260/ocam/productos/hogar/suavizante-ocam-floral_qpctyw.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/suavizante-ocam-floral.webp",
     "presentaciones": ["1000 ml"],
     "usos": [
       "Suavizado de todo tipo de telas en lavadora o a mano",
@@ -606,7 +629,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Suavizante especial para ropa de bebé, hipoalergénico y con fragancia suave que cuida la piel sensible.",
     "descripcionLarga": "Suavizante OCAM Baby ha sido especialmente formulado para el cuidado de la ropa de bebés y personas con piel sensible. Su fórmula hipoalergénica y dermatológicamente probada suaviza las prendas sin irritar la piel delicada de los más pequeños. Contiene agentes emolientes que mantienen las fibras suaves y esponjosas, especialmente en toallas, pañales de tela, cobijas y ropa de bebé. Su suave fragancia no es invasiva y proporciona frescura sin ser abrumadora. Libre de componentes agresivos, es ideal para prendas que están en contacto directo con la piel sensible de bebés y niños pequeños.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740259/ocam/productos/hogar/suavizante-baby-ocam_pmtxvh.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/suavizante-baby-ocam.webp",
     "presentaciones": ["1000 ml"],
     "usos": [
       "Especialmente formulado para ropa de bebé y niños pequeños",
@@ -622,7 +645,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Repelente natural de insectos y mosquitos elaborado con aceite esencial de citronela de alta calidad.",
     "descripcionLarga": "Aceite de Citronela OCAM es un repelente natural de insectos elaborado a base de aceite esencial de citronela de alta calidad. Este producto actúa como barrera protectora contra mosquitos, zancudos y otros insectos voladores, siendo una alternativa natural y efectiva para proteger espacios interiores y exteriores. Su fórmula concentrada puede aplicarse en diferentes superficies o diluirse para uso en difusores y vaporizadores. El aceite de citronela emite un aroma característico que resulta agradable para las personas pero desagradable para los insectos, manteniéndolos alejados de forma natural y segura. Ideal para uso en hogares, jardines, patios, terrazas y áreas recreativas.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740755/ocam/productos/hogar/citronela_h7kzdb.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/aceite-citronela.webp",
     "presentaciones": ["110 ml"],
     "usos": [
       "Repelente natural contra mosquitos, zancudos y otros insectos voladores",
@@ -639,7 +662,7 @@
     "categorias": ["domestico"],
     "descripcionCorta": "Gel antibacterial para higiene de manos que elimina el 99.9% de gérmenes y bacterias sin necesidad de agua.",
     "descripcionLarga": "Alcohol en Gel OCAM es un desinfectante antibacterial de uso tópico formulado para la higiene y desinfección de manos cuando no se dispone de agua y jabón. Su fórmula con alto contenido de alcohol elimina el 99.9% de gérmenes, bacterias y virus en segundos. Este gel de rápida absorción no deja residuos pegajosos y se seca rápidamente en las manos, dejándolas limpias, suaves y con una agradable sensación de frescura. Ideal para uso personal, familiar, en oficinas, comercios, hospitales, escuelas y cualquier lugar donde se requiera mantener las manos limpias y desinfectadas. Su presentación con dosificador permite una aplicación fácil, controlada y sin desperdicios.",
-    "imageUrl": "https://res.cloudinary.com/soypoloyo/image/upload/v1767740971/ocam/productos/hogar/alcohol-gel_xtufbv.png",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/alcohol-gel.webp",
     "presentaciones": ["240 ml"],
     "usos": [
       "Desinfección rápida de manos sin necesidad de agua",
@@ -648,6 +671,54 @@
       "Ideal para llevar en el bolso, auto o escritorio",
       "Prevención de contagio de enfermedades transmitidas por contacto",
       "Uso frecuente sin resecar las manos gracias a sus agentes humectantes"
+    ]
+  },
+  {
+    "id": "brilim-coolant",
+    "nombre": "Brilim Coolant",
+    "categorias": ["automotriz"],
+    "descripcionCorta": "Refrigerante anticongelante para el sistema de enfriamiento del motor, con acción antioxidante y antievaporante.",
+    "descripcionLarga": "Brilim Coolant es un refrigerante anticongelante formulado a base de etilenglicol para el sistema de enfriamiento de vehículos, maquinaria y equipo de trabajo. Protege el radiador y el circuito contra la oxidación y reduce la evaporación del líquido refrigerante. Se suministra concentrado o diluido en el depósito destinado para tal fin. Disponible en color rojo y verde.",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/brilim-coolant.webp",
+    "galeria": [
+      "https://media.quimicosocam.com/productos/automotriz/brilim-coolant-2.webp",
+      "https://media.quimicosocam.com/productos/automotriz/coolant-rojo.webp",
+      "https://media.quimicosocam.com/productos/automotriz/coolant-verde.webp"
+    ],
+    "presentaciones": ["3.785 litros - Rojo", "3.785 litros - Verde"],
+    "usos": [
+      "Radiadores y sistemas de enfriamiento de automóviles",
+      "Maquinaria agrícola e industrial y equipo de trabajo",
+      "Protección del circuito de enfriamiento contra la oxidación"
+    ]
+  },
+  {
+    "id": "remocam-desengrasante-industrial",
+    "nombre": "Remocam Desengrasante Industrial",
+    "categorias": ["automotriz"],
+    "descripcionCorta": "Desengrasante industrial multiuso en presentación con atomizador para motores, piezas y superficies con grasa difícil.",
+    "descripcionLarga": "Remocam es un limpiador desengrasante multiuso de uso industrial que remueve grasa, aceite y suciedad acumulada en motores, partes automotrices, maquinaria y superficies de trabajo. Se aplica de forma abundante sobre la superficie a limpiar y se frota vigorosamente con un trozo de tela hasta que la suciedad desaparezca; si es necesario, se repite la aplicación. Agitar antes de usar.",
+    "imageUrl": "https://media.quimicosocam.com/productos/automotriz/remocam-desengrasante-industrial.webp",
+    "presentaciones": ["1000 ml con atomizador"],
+    "usos": [
+      "Motores y partes automotrices",
+      "Maquinaria y equipo industrial",
+      "Superficies con grasa y aceite acumulados"
+    ]
+  },
+  {
+    "id": "desengrasante-horax",
+    "nombre": "Desengrasante Horax",
+    "categorias": ["domestico"],
+    "descripcionCorta": "Limpiador desengrasante multiuso con aroma a limón para cocinas, estufas y superficies del hogar con grasa acumulada.",
+    "descripcionLarga": "Desengrasante Horax es un limpiador desengrasante multiuso con aroma a limón, formulado para remover la grasa acumulada en cocinas, estufas, campanas extractoras, hornos, azulejos y demás superficies del hogar. Se aplica de forma abundante sobre la superficie a limpiar y se frota con un paño hasta que la suciedad desaparezca; si es necesario, se repite la aplicación.",
+    "imageUrl": "https://media.quimicosocam.com/productos/hogar/desengrasante-horax.webp",
+    "galeria": ["https://media.quimicosocam.com/productos/hogar/desengrasante-horax-2.webp"],
+    "presentaciones": ["3.785 litros - Aroma limón"],
+    "usos": [
+      "Cocinas, estufas y campanas extractoras",
+      "Hornos, parrillas y azulejos",
+      "Pisos y superficies con grasa acumulada"
     ]
   }
 ]
