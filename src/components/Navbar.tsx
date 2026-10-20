@@ -1,6 +1,9 @@
+'use client';
+
 import { Menu, MessageCircle, Phone, X } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { empresa, whatsappUrl } from '../data/empresa';
 import { cn } from '../utils/cn';
 import { Button } from './ui';
@@ -17,7 +20,7 @@ const enlaces = [
 export default function Navbar() {
   const [abierto, setAbierto] = useState(false);
   const [conScroll, setConScroll] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setConScroll(window.scrollY > 24);
@@ -26,15 +29,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Al cambiar de ruta: cierra el menú móvil y resuelve los anchors (/#nosotros) desde cualquier página.
-  useEffect(() => {
-    setAbierto(false);
-    if (location.hash) {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, [location]);
-
-  const esActivo = (to: string) => to === location.pathname;
+  const esActivo = (to: string) => to === pathname;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:px-6 sm:pt-4">
@@ -45,7 +40,7 @@ export default function Navbar() {
           conScroll || abierto ? 'bg-white/90 shadow-card ring-slate-200/80' : 'bg-white/60 ring-white/60'
         )}
       >
-        <Link to="/" className="flex shrink-0 items-center" aria-label="Químicos OCAM, inicio">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Químicos OCAM, inicio">
           <img src="/ocam.png" alt="Químicos OCAM" className="h-9 w-auto" />
         </Link>
 
@@ -53,12 +48,10 @@ export default function Navbar() {
           {enlaces.map((e) => (
             <li key={e.to}>
               <Link
-                to={e.to}
+                href={e.to}
                 className={cn(
                   'rounded-full px-3.5 py-2 text-sm font-medium transition-colors',
-                  esActivo(e.to)
-                    ? 'bg-brand-50 text-brand-700'
-                    : 'text-slate-700 hover:bg-slate-100 hover:text-brand-700'
+                  esActivo(e.to) ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100 hover:text-brand-700'
                 )}
               >
                 {e.label}
@@ -91,15 +84,13 @@ export default function Navbar() {
       </nav>
 
       {abierto && (
-        <div
-          id="menu-movil"
-          className="mx-auto mt-2 max-w-6xl rounded-panel bg-white p-3 shadow-card-hover ring-1 ring-slate-200 md:hidden"
-        >
+        <div id="menu-movil" className="mx-auto mt-2 max-w-6xl rounded-panel bg-white p-3 shadow-card-hover ring-1 ring-slate-200 md:hidden">
           <ul className="flex flex-col">
             {enlaces.map((e) => (
               <li key={e.to}>
                 <Link
-                  to={e.to}
+                  href={e.to}
+                  onClick={() => setAbierto(false)}
                   className={cn(
                     'block rounded-ui px-3 py-3 text-base font-medium transition-colors hover:bg-slate-100 hover:text-brand-700',
                     esActivo(e.to) ? 'text-brand-700' : 'text-slate-700'

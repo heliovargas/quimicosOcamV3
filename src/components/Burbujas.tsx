@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, type CSSProperties } from 'react';
 import { cn } from '../utils/cn';
 

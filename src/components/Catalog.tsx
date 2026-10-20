@@ -1,6 +1,8 @@
-import { useMemo, useState } from 'react';
+'use client';
+
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { PackageSearch, Search, X } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
 import productosData from '../data/productos.json';
 import { categorias, type Product } from '../types/Product';
 import { cn } from '../utils/cn';
@@ -9,24 +11,36 @@ import { Container } from './ui';
 
 const productos = productosData as Product[];
 type Categoria = Product['categorias'][number];
+type Filtro = Categoria | 'todos';
 
 const conteo = Object.fromEntries(
   categorias.map((c) => [c.id, productos.filter((p) => p.categorias.includes(c.id)).length])
 ) as Record<Categoria, number>;
 
 const nombreCategoria = (id: Categoria) => categorias.find((c) => c.id === id)?.nombre ?? id;
-
 const esCategoria = (valor: string | null): valor is Categoria => categorias.some((c) => c.id === valor);
 
-export default function Catalog() {
-  // /catalogo?categoria=domestico abre el catálogo ya filtrado y el filtro se mantiene en la URL.
-  const [params, setParams] = useSearchParams();
+/**
+ * Lee ?categoria= de la URL y la empuja al catálogo. Va aislado en su propio Suspense para que
+ * el listado completo quede en el HTML estático y solo este pedacito se resuelva en el cliente.
+ */
+function CategoriaDesdeUrl({ onCambio }: { onCambio: (f: Filtro) => void }) {
+  const params = useSearchParams();
   const categoria = params.get('categoria');
-  const seleccionada: Categoria | 'todos' = esCategoria(categoria) ? categoria : 'todos';
+  useEffect(() => {
+    onCambio(esCategoria(categoria) ? categoria : 'todos');
+  }, [categoria, onCambio]);
+  return null;
+}
+
+export default function Catalog() {
+  const [seleccionada, setSeleccionada] = useState<Filtro>('todos');
   const [busqueda, setBusqueda] = useState('');
 
-  const elegir = (id: Categoria | 'todos') => {
-    setParams(id === 'todos' ? {} : { categoria: id }, { replace: true });
+  const elegir = (id: Filtro) => {
+    setSeleccionada(id);
+    // Next sincroniza useSearchParams con el History API, sin recargar ni pedir nada al servidor.
+    window.history.replaceState(null, '', id === 'todos' ? '/catalogo' : `/catalogo?categoria=${id}`);
   };
 
   const filtrados = useMemo(() => {
@@ -40,6 +54,10 @@ export default function Catalog() {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <CategoriaDesdeUrl onCambio={setSeleccionada} />
+      </Suspense>
+
       {/* Cabecera */}
       <div className="bg-linear-to-b from-brand-50/70 to-white">
         <Container className="pt-6 pb-8 sm:pt-10">
@@ -91,9 +109,7 @@ export default function Catalog() {
                   )}
                 >
                   {id === 'todos' ? 'Todos' : nombreCategoria(id)}
-                  <span className={cn('rounded-full px-1.5 text-xs', activa ? 'bg-white/20' : 'bg-white text-slate-500')}>
-                    {total}
-                  </span>
+                  <span className={cn('rounded-full px-1.5 text-xs', activa ? 'bg-white/20' : 'bg-white text-slate-500')}>{total}</span>
                 </button>
               );
             })}
@@ -126,9 +142,7 @@ export default function Catalog() {
       {/* Resultados */}
       <Container className="py-8 sm:py-10">
         <p className="text-sm text-slate-500" aria-live="polite">
-          {filtrados.length === productos.length
-            ? `${productos.length} productos`
-            : `${filtrados.length} de ${productos.length} productos`}
+          {filtrados.length === productos.length ? `${productos.length} productos` : `${filtrados.length} de ${productos.length} productos`}
           {seleccionada !== 'todos' && <> en {nombreCategoria(seleccionada)}</>}
         </p>
 

@@ -1,9 +1,0 @@
-# robots.txt para Químicos OCAM
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://quimicosocam.com/sitemap.xml
-
-# Crawl delay (opcional, ayuda a no sobrecargar el servidor)
-Crawl-delay: 1

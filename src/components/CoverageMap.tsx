@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, type MouseEvent } from 'react';
 import { ChevronDown, MapPin } from 'lucide-react';
 import { geoMercator, geoPath } from 'd3-geo';
@@ -104,7 +106,7 @@ const TRAZOS = {
 };
 const zonaPorCanton = new Map<string, Zona>(ZONAS.flatMap((z) => z.cantones.map((c) => [c, z] as const)));
 
-if (import.meta.env.DEV) {
+if (process.env.NODE_ENV !== 'production') {
   const nombres = new Set(cantones.map((c) => c.properties.nombre));
   for (const nombre of zonaPorCanton.keys()) {
     if (!nombres.has(nombre)) console.warn(`CoverageMap: el cantón "${nombre}" no existe en costa-rica.json`);
@@ -140,7 +142,7 @@ export default function CoverageMap() {
   const [zonaFija, setZonaFija] = useState<string | null>(null);
   const [zonaHover, setZonaHover] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<Tooltip | null>(null);
-  const anim = useScrollAnimation();
+  const [animRef, animVisible] = useScrollAnimation();
 
   const resaltada = zonaHover ?? zonaFija;
   const atenuar = (zona?: Zona) => resaltada !== null && zona?.provincia !== resaltada;
@@ -156,10 +158,10 @@ export default function CoverageMap() {
   return (
     <Section id="cobertura">
       <div
-        ref={anim.ref}
+        ref={animRef}
         className={cn(
           'grid gap-10 transition-all duration-700 lg:grid-cols-12 lg:gap-12',
-          anim.isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          animVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         )}
       >
         {/* Mapa */}

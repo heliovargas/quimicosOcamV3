@@ -1,8 +1,31 @@
-import { ExternalLink, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import type { SVGProps } from 'react';
+import { ExternalLink, Mail, MapPin, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 import { empresa, whatsappUrl } from '../data/empresa';
 import { categorias } from '../types/Product';
 import { Container } from './ui';
+
+/** Iconos de redes (lucide ya no incluye marcas). */
+const svgProps: SVGProps<SVGSVGElement> = { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 2, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true };
+const Instagram = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} {...svgProps}>
+    <rect x="2" y="2" width="20" height="20" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </svg>
+);
+const Facebook = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} {...svgProps}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+const Linkedin = ({ size = 18 }: { size?: number }) => (
+  <svg width={size} height={size} {...svgProps}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 
 const navegacion = [
   { label: 'Inicio', to: '/' },
@@ -52,7 +75,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* Marca */}
           <div className="lg:col-span-4">
-            <Link to="/" className="inline-flex" aria-label="Químicos OCAM, inicio">
+            <Link href="/" className="inline-flex" aria-label="Químicos OCAM, inicio">
               <img src="/ocam.png" alt="Químicos OCAM" className="h-14 w-auto" />
             </Link>
             <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-brand-200">
@@ -68,7 +91,7 @@ export default function Footer() {
                     aria-label={`${nombre} de Químicos OCAM`}
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/10 transition-colors hover:bg-white/20"
                   >
-                    <Icono size={18} aria-hidden="true" />
+                    <Icono size={18} />
                   </a>
                 </li>
               ))}
@@ -81,7 +104,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5">
               {navegacion.map((e) => (
                 <li key={e.to}>
-                  <Link to={e.to} className={enlace}>
+                  <Link href={e.to} className={enlace}>
                     {e.label}
                   </Link>
                 </li>
@@ -95,7 +118,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5">
               {categorias.map((c) => (
                 <li key={c.id}>
-                  <Link to={`/catalogo?categoria=${c.id}`} className={enlace}>
+                  <Link href={`/catalogo?categoria=${c.id}`} className={enlace}>
                     {c.nombre}
                   </Link>
                 </li>

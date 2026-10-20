@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import productosData from '../data/productos.json';
 import type { Product } from '../types/Product';
 import { r2Image, r2Srcset } from '../utils/r2';
@@ -51,7 +51,7 @@ export default function Estanteria() {
       <div className="flex items-center justify-between px-1">
         <p className="text-sm font-semibold text-slate-800">Nuestros productos</p>
         <Link
-          to="/catalogo"
+          href="/catalogo"
           className="inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-800"
         >
           Ver catálogo
@@ -75,7 +75,7 @@ export default function Estanteria() {
               <ul className="relative flex h-16 items-end justify-around gap-1 sm:h-20">
                 {fila.map((p) => (
                   <li key={p.id} className="group relative flex w-full justify-center">
-                    <Link to={`/productos/${p.id}`} className="block" aria-label={p.nombre}>
+                    <Link href={`/productos/${p.id}`} className="block" aria-label={p.nombre}>
                       <img
                         src={r2Image(p.imageUrl, { width: 160 })}
                         srcSet={r2Srcset(p.imageUrl, [96, 160, 240])}

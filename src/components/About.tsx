@@ -1,3 +1,5 @@
+'use client';
+
 import { Award, Beaker, Check, Heart, Target, TrendingUp, Users } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -84,8 +86,8 @@ const entrada = (visible: boolean, i = 0) => ({
 });
 
 export default function About() {
-  const lista = useScrollAnimation();
-  const fila = useScrollAnimation();
+  const [listaRef, listaVisible] = useScrollAnimation();
+  const [filaRef, filaVisible] = useScrollAnimation();
 
   return (
     <Section id="nosotros">
@@ -119,10 +121,10 @@ export default function About() {
         </div>
 
         {/* Los cuatro bloques, numerados, entran en cascada. */}
-        <div ref={lista.ref} className="lg:col-span-7">
+        <div ref={listaRef} className="lg:col-span-7">
           <ol className="space-y-2">
             {bloques.map(({ icono: Icono, titulo, parrafos, acento }, i) => {
-              const anim = entrada(lista.isVisible, i);
+              const anim = entrada(listaVisible, i);
               return (
                 <li
                   key={titulo}
@@ -163,9 +165,9 @@ export default function About() {
       </div>
 
       {/* Visión, Valores e Historia: tres tarjetas iguales con filete de marca, chip en degradado y marca de agua. */}
-      <div ref={fila.ref} className="mt-16 grid gap-5 md:grid-cols-3">
+      <div ref={filaRef} className="mt-16 grid gap-5 md:grid-cols-3">
         {identidad.map(({ icono: Icono, titulo, texto, acento, etiqueta }, i) => {
-          const anim = entrada(fila.isVisible, i);
+          const anim = entrada(filaVisible, i);
           return (
             <article
               key={titulo}

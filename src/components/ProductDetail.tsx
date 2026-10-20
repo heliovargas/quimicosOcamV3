@@ -1,5 +1,5 @@
 import { Check, ExternalLink, MessageCircle, Package, Phone, ShieldCheck, Truck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { empresa, whatsappUrl } from '../data/empresa';
 import { categorias, type Product } from '../types/Product';
 import ProductGallery from './ProductGallery';
@@ -32,7 +32,7 @@ export default function ProductDetail({ product, showFullPageButton = false, onV
               {product.categorias.map((cat, i) => (
                 <span key={cat}>
                   {i > 0 && <span aria-hidden="true" className="mr-2 text-slate-300">·</span>}
-                  <Link to={`/catalogo?categoria=${cat}`} className="transition-colors hover:text-accent-800">
+                  <Link href={`/catalogo?categoria=${cat}`} className="transition-colors hover:text-accent-800">
                     {nombreCategoria(cat)}
                   </Link>
                 </span>

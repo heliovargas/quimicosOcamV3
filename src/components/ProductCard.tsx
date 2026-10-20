@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { categorias, type Product } from '../types/Product';
 import ProductImage from './ProductImage';
 
@@ -12,7 +12,7 @@ const abreviar = (presentacion: string) => presentacion.replace(/\s*litros?$/i, 
 export default function ProductCard({ producto: p }: { producto: Product }) {
   return (
     <Link
-      to={`/productos/${p.id}`}
+      href={`/productos/${p.id}`}
       className="group flex h-full flex-col overflow-hidden rounded-panel bg-white shadow-card ring-1 ring-slate-200/80 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-card-hover"
     >
       <div className="relative aspect-square bg-linear-to-b from-brand-50/70 to-white">

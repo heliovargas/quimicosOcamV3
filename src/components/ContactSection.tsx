@@ -1,5 +1,8 @@
+'use client';
+
 import { Clock, ExternalLink, Mail, MapPin, MessageCircle, Navigation, Phone } from 'lucide-react';
 import { empresa, whatsappUrl } from '../data/empresa';
+import { useSyncExternalStore } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { cn } from '../utils/cn';
 import { Button, Section } from './ui';
@@ -27,18 +30,24 @@ function abiertoAhora(): boolean {
   return HORARIOS.some((h) => h.diasSemana.includes(dia) && hora >= h.desde && hora < h.hasta);
 }
 
+function suscribirReloj(avisar: () => void) {
+  const id = window.setInterval(avisar, 60_000);
+  return () => window.clearInterval(id);
+}
+
 const entrada = (visible: boolean, i = 0) => ({
   className: cn('transition-all duration-700 ease-out', visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'),
   style: { transitionDelay: `${i * 110}ms` },
 });
 
 export default function ContactSection() {
-  const anim = useScrollAnimation();
-  const abierto = abiertoAhora();
+  const [animRef, animVisible] = useScrollAnimation();
+  // Solo en el navegador: en el build no hay "ahora". Se recalcula cada minuto.
+  const abierto = useSyncExternalStore(suscribirReloj, abiertoAhora, () => null);
 
   return (
     <Section id="contacto">
-      <div ref={anim.ref} className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+      <div ref={animRef} className="grid gap-10 lg:grid-cols-12 lg:gap-12">
         {/* Datos de contacto */}
         <div className="lg:col-span-5">
           <p className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-accent-700">
@@ -50,7 +59,7 @@ export default function ContactSection() {
           <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">Encuéntrenos en la Zona Norte</p>
 
           <ul className="mt-8 space-y-6">
-            <li className={cn('flex gap-4', entrada(anim.isVisible, 0).className)} style={entrada(anim.isVisible, 0).style}>
+            <li className={cn('flex gap-4', entrada(animVisible, 0).className)} style={entrada(animVisible, 0).style}>
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-ui bg-linear-to-br from-brand-500 to-brand-700 text-white shadow-brand">
                 <MapPin size={20} aria-hidden="true" />
               </span>
@@ -73,22 +82,24 @@ export default function ContactSection() {
               </div>
             </li>
 
-            <li className={cn('flex gap-4', entrada(anim.isVisible, 1).className)} style={entrada(anim.isVisible, 1).style}>
+            <li className={cn('flex gap-4', entrada(animVisible, 1).className)} style={entrada(animVisible, 1).style}>
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-ui bg-linear-to-br from-accent-400 to-accent-600 text-white shadow-[0_8px_20px_-8px_rgb(81_184_72/0.6)]">
                 <Clock size={20} aria-hidden="true" />
               </span>
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                   <h3 className="font-display text-lg font-semibold text-slate-900">Horarios de Atención</h3>
-                  <span
-                    className={cn(
-                      'inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset',
-                      abierto ? 'bg-accent-50 text-accent-800 ring-accent-200' : 'bg-slate-100 text-slate-600 ring-slate-200'
-                    )}
-                  >
-                    <span className={cn('h-1.5 w-1.5 rounded-full', abierto ? 'bg-accent-500' : 'bg-slate-400')} aria-hidden="true" />
-                    {abierto ? 'Abierto ahora' : 'Cerrado ahora'}
-                  </span>
+                  {abierto !== null && (
+                    <span
+                      className={cn(
+                        'inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset',
+                        abierto ? 'bg-accent-50 text-accent-800 ring-accent-200' : 'bg-slate-100 text-slate-600 ring-slate-200'
+                      )}
+                    >
+                      <span className={cn('h-1.5 w-1.5 rounded-full', abierto ? 'bg-accent-500' : 'bg-slate-400')} aria-hidden="true" />
+                      {abierto ? 'Abierto ahora' : 'Cerrado ahora'}
+                    </span>
+                  )}
                 </div>
                 <dl className="mt-2 divide-y divide-slate-200">
                   {HORARIOS.map((h) => (
@@ -101,7 +112,7 @@ export default function ContactSection() {
               </div>
             </li>
 
-            <li className={cn('flex gap-4', entrada(anim.isVisible, 2).className)} style={entrada(anim.isVisible, 2).style}>
+            <li className={cn('flex gap-4', entrada(animVisible, 2).className)} style={entrada(animVisible, 2).style}>
               <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-ui bg-linear-to-br from-brand-500 to-brand-700 text-white shadow-brand">
                 <Phone size={20} aria-hidden="true" />
               </span>
@@ -121,7 +132,7 @@ export default function ContactSection() {
             </li>
           </ul>
 
-          <div className={cn('mt-8 flex flex-col gap-3 sm:flex-row', entrada(anim.isVisible, 3).className)} style={entrada(anim.isVisible, 3).style}>
+          <div className={cn('mt-8 flex flex-col gap-3 sm:flex-row', entrada(animVisible, 3).className)} style={entrada(animVisible, 3).style}>
             <Button href={whatsappUrl()} variant="whatsapp">
               <MessageCircle size={18} aria-hidden="true" />
               Escribinos por WhatsApp
@@ -134,7 +145,7 @@ export default function ContactSection() {
         </div>
 
         {/* Mapa */}
-        <div className={cn('lg:col-span-7', entrada(anim.isVisible, 1).className)} style={entrada(anim.isVisible, 1).style}>
+        <div className={cn('lg:col-span-7', entrada(animVisible, 1).className)} style={entrada(animVisible, 1).style}>
           <div className="relative h-[380px] overflow-hidden rounded-panel shadow-card ring-1 ring-slate-200/80 lg:h-full lg:min-h-[460px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7847.4877407460435!2d-84.355933!3d10.441888000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa07b87142222af%3A0x79a613ed245c4ee9!2sOCAM%20Productos%20de%20Limpieza!5e0!3m2!1sen!2scr!4v1762612089967!5m2!1sen!2scr"

@@ -1,3 +1,5 @@
+'use client';
+
 import { Factory, MessageCircle, Phone, Quote, ShieldCheck, Store, Truck } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { whatsappUrl } from '../data/empresa';
@@ -55,8 +57,8 @@ const entrada = (visible: boolean, i = 0) => ({
 });
 
 export default function Services() {
-  const tarjetas = useScrollAnimation();
-  const cita = useScrollAnimation();
+  const [tarjetasRef, tarjetasVisible] = useScrollAnimation();
+  const [citaRef, citaVisible] = useScrollAnimation();
 
   return (
     <Section id="servicios">
@@ -82,9 +84,9 @@ export default function Services() {
       </div>
 
       {/* Bento: dos tarjetas grandes arriba y tres abajo, numeradas como una cadena. */}
-      <div ref={tarjetas.ref} className="mt-12 grid gap-5 md:grid-cols-6">
+      <div ref={tarjetasRef} className="mt-12 grid gap-5 md:grid-cols-6">
         {servicios.map(({ icono: Icono, titulo, texto, destacado }, i) => {
-          const anim = entrada(tarjetas.isVisible, i);
+          const anim = entrada(tarjetasVisible, i);
           return (
             <article
               key={titulo}
@@ -130,10 +132,10 @@ export default function Services() {
 
       {/* Frase de cierre en un panel claro. */}
       <figure
-        ref={cita.ref}
+        ref={citaRef}
         className={cn(
           'relative mt-10 overflow-hidden rounded-panel bg-linear-to-r from-brand-50 via-white to-accent-50 px-7 py-9 text-center ring-1 ring-slate-200/70 sm:px-12 lg:py-12',
-          entrada(cita.isVisible).className
+          entrada(citaVisible).className
         )}
       >
         <Quote aria-hidden="true" size={120} strokeWidth={1} className="pointer-events-none absolute -top-6 -left-4 text-brand-100" />

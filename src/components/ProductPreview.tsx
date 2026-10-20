@@ -1,5 +1,7 @@
+'use client';
+
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import productosData from '../data/productos.json';
 import { categorias, type Product } from '../types/Product';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -40,7 +42,7 @@ const entrada = (visible: boolean, i = 0) => ({
 });
 
 export default function ProductPreview() {
-  const anim = useScrollAnimation();
+  const [animRef, animVisible] = useScrollAnimation();
 
   return (
     <Section id="productos">
@@ -65,13 +67,13 @@ export default function ProductPreview() {
       </div>
 
       {/* Una tarjeta por línea de producto, con tres fotos reales en abanico. */}
-      <div ref={anim.ref} className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
+      <div ref={animRef} className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5">
         {lineas.map((linea, i) => {
-          const a = entrada(anim.isVisible, i);
+          const a = entrada(animVisible, i);
           return (
             <Link
               key={linea.id}
-              to={`/catalogo?categoria=${linea.id}`}
+              href={`/catalogo?categoria=${linea.id}`}
               className={cn(
                 'group relative overflow-hidden rounded-panel bg-linear-to-b from-brand-50/70 to-white p-4 shadow-card ring-1 ring-slate-200/80 hover:-translate-y-1 hover:shadow-card-hover sm:p-5',
                 a.className

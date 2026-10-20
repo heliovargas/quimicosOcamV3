@@ -1,5 +1,5 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
-import { Link, type LinkProps } from 'react-router-dom';
+import Link, { type LinkProps } from 'next/link';
 import { cn } from '../../utils/cn';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'whatsapp' | 'inverted' | 'outline-inverted';
@@ -20,8 +20,9 @@ type AnchorProps = CommonProps &
   };
 
 type RouterProps = CommonProps &
-  Omit<LinkProps, keyof CommonProps | 'to'> & {
-    /** Ruta interna de react-router. */
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonProps | 'href'> &
+  Omit<LinkProps, keyof CommonProps | 'href'> & {
+    /** Ruta interna del sitio. */
     to: string;
     href?: never;
   };
@@ -46,7 +47,7 @@ const variants: Record<ButtonVariant, string> = {
   outline: 'border border-slate-300 bg-white text-slate-800 hover:border-brand-400 hover:text-brand-700',
   ghost: 'text-slate-700 hover:bg-slate-100 hover:text-brand-700',
   whatsapp: 'bg-whatsapp text-white shadow-card hover:bg-whatsapp-hover',
-  // Para fondos oscuros (hero, secciones tone="brand").
+  // Para fondos oscuros.
   inverted: 'bg-white text-brand-800 shadow-card hover:bg-brand-50',
   'outline-inverted': 'border border-white/30 text-white hover:border-white/60 hover:bg-white/10',
 };
@@ -69,7 +70,7 @@ function omitStyleProps<T extends CommonProps>(props: T): Omit<T, keyof CommonPr
 
 /**
  * Botón único del sitio. Renderiza <Link>, <a> o <button> según reciba `to`, `href` o nada.
- * Un solo radio, una sola tipografía, cinco variantes. No crear botones a mano fuera de aquí.
+ * Un solo radio, una sola tipografía, siete variantes. No crear botones a mano fuera de aquí.
  */
 export default function Button(props: ButtonProps) {
   const { variant = 'primary', size = 'md', className, children } = props;
@@ -78,7 +79,7 @@ export default function Button(props: ButtonProps) {
   if (props.to !== undefined) {
     const { to, ...rest } = omitStyleProps(props as RouterProps);
     return (
-      <Link to={to} className={classes} {...rest}>
+      <Link {...rest} href={to} className={classes}>
         {children}
       </Link>
     );
@@ -88,12 +89,7 @@ export default function Button(props: ButtonProps) {
     const { href, ...rest } = omitStyleProps(props as AnchorProps);
     const external = /^https?:\/\//.test(href);
     return (
-      <a
-        href={href}
-        className={classes}
-        {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        {...rest}
-      >
+      <a {...rest} href={href} className={classes} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
         {children}
       </a>
     );
